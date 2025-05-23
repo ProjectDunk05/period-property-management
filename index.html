@@ -6,6 +6,7 @@
     <title>Period Property Management</title>
     <link rel="stylesheet" href="css/modern-normalise.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
 </head>
 <body>
     <div class="container header">
@@ -13,7 +14,14 @@
             <div class="logo">
                 <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
             </div>
-            <div class="nav-header">
+            
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-header" id="nav-menu">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about-us.html">About Us</a></li>

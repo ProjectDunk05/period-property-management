@@ -6,9 +6,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-}
-
 .container {
     max-width: 1536px;
     margin-left: auto;
@@ -60,4 +57,45 @@ body {
     .container {
       width: 100%;
     }
+  }
+
+  body {
+    background-color: #f6f6f6;
+  }
+
+  .headerBar {
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+  }
+
+  .logo {
+    width: 30%;
+  }
+
+  .responsive-img {
+    width: 100%;        
+    height: 100%;       
+    max-width: 600px;   
+    display: block;    
+  }
+
+ .nav-header {
+    display: flex;
+    align-items: end;
+    padding: 0.25rem;
+ }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 1.5rem;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  a {
+    color: #111111;
+    font-size: 1.25rem;
+    text-decoration: none;
   }

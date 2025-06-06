@@ -6,7 +6,7 @@
     <title>Period Property Management</title>
     <link rel="stylesheet" href="css/modern-normalise.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/scripts.js"></script>
+     <script src="js/scripts.js" defer></script>
 </head>
 <body>
     <div class="container header">
@@ -35,8 +35,21 @@
             </div>
         </div>    
     </div>
-    <div class="container image"></div>
-    <div class="conatiner content"></div>
-    <div class="conatiner footer"></div>
+    <div class="container image">
+        <div class="slider">
+            <div class="slides">
+                <img class="slide" src="images/slides1.jpg" alt="Image #1">
+                <img class="slide" src="images/slides2.jpg" alt="Image #2">
+                <img class="slide" src="images/slides3.jpg" alt="Image #3">
+                <img class="slide" src="images/slides4.jpg" alt="Image #4">
+                <img class="slide" src="images/slides5.jpg" alt="Image #5">
+                <img class="slide" src="images/slides6.jpg" alt="Image #6">
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094</button>
+            <button class="next" onclick="nextSlide()">&#10095</button>
+        </div>
+    </div>
+    <div class="container content"></div>
+    <div class="container footer"></div>
 </body>
 </html>

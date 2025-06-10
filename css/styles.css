@@ -15,96 +15,80 @@ html {
     padding-right: 0.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-  }
+}
 
-  .hamburger {
+.hamburger {
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 25px;
     height: 20px;
     cursor: pointer;
-  }
+}
   
-  .hamburger span {
+.hamburger span {
     display: block;
     height: 3px;
     background: #333;
     border-radius: 2px;
-  }
+}
 
-  .logo {
+.logo {
     width: 30%;
-  }
+}
 
-  .headerBar {
+.headerBar {
     display: flex;
     justify-content: space-between;
     height: 7rem;
-  }
+}
 
-  .responsive-img {
+.responsive-img {
     width: 100%;        
     height: 100%;       
     max-width: 600px;   
     display: block;    
-  }
+}
 
- .nav-header {
+.nav-header {
     display: flex;
     align-items: end;
     padding: 0.25rem;
- }
+}
 
-  .nav-links {
+.nav-links {
     display: flex;
     justify-content: flex-end; 
     gap: 1.5rem;
     list-style: none;
     text-decoration: none;
-  }
+}
 
-  a {
+a {
     color: #111111;
     font-size: 1rem;
     text-decoration: none;
-  }
+}
 
-  .slider {
+.slider {
     position: relative;
     width: 100%;
+    height: 37.5rem;
     margin: auto;
     overflow: hidden;
-  }
+}
 
-  .slider img {
+.slider img {
     width: 100%;
     display: none;
-  }
+}
 
-  img.displaySlide {
+img.displaySlide {
     display: block;
     animation-name: fade;
     animation-duration: 1.5s;
-  }
+}
 
-  .slider button{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1rem;
-    padding: 10px 15px;
-    background-color: hsla(0, 0%, 0%, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-.prev{
-    left: 0;
-}
-.next{
-    right: 0;
-}
 @keyframes fade {
     from {opacity: .5}
     to {opacity: 1}

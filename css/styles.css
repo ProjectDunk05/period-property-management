@@ -162,6 +162,21 @@ ul.footer-list {
   background-color: #111111;
 }
 
+/* FAQs */
+
+.answer {
+  display: none;
+}
+
+.question {
+  cursor: pointer;
+}
+
+.answer, .question{
+    padding: 0.5rem;
+    border: solid 0.5rem grey;
+} 
+
 /* MEDIA QUERIES */
 
 /* 2xl */

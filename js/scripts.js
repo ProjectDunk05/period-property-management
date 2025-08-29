@@ -42,3 +42,19 @@ function nextSlide(){
     slideIndex++;
     showSlide(slideIndex);
 }
+
+// FAQs toggle answer display when question clicked on //
+
+const questions = document.querySelectorAll(".question");
+
+questions.forEach((question) => {
+    question.addEventListener("click", () => {
+        const para = question.nextElementSibling;
+        
+        if(para.style.display === "none" || para.computedStyleMap.display === "") {
+            para.style.display = "block";
+        } else {
+            para.style.display = "none";
+        }    
+    });
+});

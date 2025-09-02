@@ -50,11 +50,14 @@ const questions = document.querySelectorAll(".question");
 questions.forEach((question) => {
     question.addEventListener("click", () => {
         const para = question.nextElementSibling;
+        const icon = question.querySelector(".toggle-icon");
         
         if(para.style.display === "none" || para.computedStyleMap.display === "") {
             para.style.display = "block";
+            icon.textContent = "-";
         } else {
             para.style.display = "none";
+            icon.textContent = "+";
         }    
     });
 });

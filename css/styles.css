@@ -163,19 +163,47 @@ ul.footer-list {
 }
 
 /* FAQs */
+.questions {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+  gap: 2.5rem;
+}
+
+h4 {
+  text-align: start;
+  width: 90%;
+  font-weight: 400;
+}
 
 .answer {
   display: none;
+  text-align: start;
+  font-weight: 300;
 }
 
 .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
+  background-color: #fdf9f5;
+  border-radius: 0.3rem;
+}
+
+.pair {
+  box-shadow: -1px 1px 0.8rem 1px grey;
 }
 
 .answer, .question{
-    padding: 0.5rem;
-    border: solid 0.5rem grey;
+  padding: 1rem;
 } 
+
+.toggle-icon {
+  font-size: 1.5rem;
+  color: grey;
+}
 
 /* MEDIA QUERIES */
 
@@ -258,6 +286,10 @@ ul.footer-list {
       border-right-width: 0;
       border-bottom-width: 0;
       width: 100%;
+    }
+
+    .questions {
+      width: 90%;
     }
 
   }

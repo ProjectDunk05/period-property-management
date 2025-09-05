@@ -43,6 +43,7 @@ html {
     display: flex;
     justify-content: space-between;
     height: 7rem;
+    align-items: center;
 }
 
 .responsive-img {
@@ -179,7 +180,7 @@ ul.footer-list {
 }
 
 .column-footer p,li,a {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .footer img {
@@ -205,18 +206,21 @@ ul.footer-list {
   margin: auto;
   gap: 2.5rem;
   padding-top: 7.5rem;
+  padding-bottom: 3.75rem;
 }
 
 h4 {
   text-align: start;
   width: 90%;
   font-weight: 400;
+  font-size: 1.25rem;
 }
 
 .answer {
   display: none;
   text-align: start;
   font-weight: 300;
+  background-color: lightgray;
 }
 
 .question {
@@ -225,11 +229,12 @@ h4 {
   align-items: center;
   cursor: pointer;
   background-color: #fdf9f5;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
 }
 
 .pair {
   box-shadow: -1px 1px 0.8rem 1px grey;
+  border-radius: 0.5rem;
 }
 
 .answer, .question{

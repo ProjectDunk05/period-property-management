@@ -481,6 +481,14 @@ h4 {
     .container {
       max-width: 640px;
     }
+
+    .image-content {
+    display: none;
+  }
+
+  .text {
+    width: 100%;
+  }
   }
   
   /* sm */

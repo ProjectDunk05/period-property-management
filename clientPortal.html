@@ -6,127 +6,51 @@
     <title>Period Property Management</title>
     <link rel="stylesheet" href="css/modern-normalise.css">
     <link rel="stylesheet" href="css/styles.css">
-     <script src="js/scripts.js" defer></script>
+    <script type="module" src="register.js" defer></script>
 </head>
 <body>
-    <div class="container header">
-        <div class="headerBar">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
-                </a>
-            </div>
-            <div class="mobile-menu">
-                <div class="hamburger" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="nav-header" id="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="emergencies.html">Emergencies</a></li>
-                    <li><a href="faqs.html">FAQs</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="report-a-fault.html">Report a Fault</a></li>
-                    <li><a href="clientPortal.html">Client Portal</a></li>
-                </ul>
-            </div>
-        </div>    
-    </div>
-    <div class="container image"></div>
-    <div class="container content"></div>
-    <footer class="container footer">
-        <div class="logo-footer">
-            <a href="index.html">
-                    <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
-            </a>
-        </div>
-        <dic class="element-divider">
-            <hr class="element-divider-separator"> 
-        </div>
-        <div class="footer-container">
-            <div class="column-footer">
-                <div class="phone">
-                    <h3>PHONE:</h3>
-                    <P>01273 563214</P>
-                </div>
-                <div class="emergency-number">
-                    <h3>EMERGENCY NUMBER:</h3>
-                    <ul class="footer-list">
-                        <li>Mon-Fri 18.00-05.00</li>
-                        <li>Sat-Sun 24 hrs</li>
-                        <li>Please call 07727256984</li>
-                    </ul>
-                </div>
-                <div class="email">
-                    <h3>EMAIL:</h3>
-                    <p>periodpropertymanagement@gmail.com</p>
-                </div>
-            </div>
-            <div class="column-footer">
-                <h3>ADDRESS</h3>
-                <p>
-                    Period Property Management LTD<br>
-                    25 New Church Road,<br>
-                    Hove, BN41 1LP
-                </p>
-                <p>
-                    Company Reg Number: 9632750<br>
-                    Company VAT Number: 218017337
-                </p>
-            </div>
-            <div class="column-footer">
-                <h3>NAVIGATION</h3>
-                <ul class="footer-list">
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="emergencies.html">Emergencies</a></li>
-                    <li><a href="faqs.html">FAQs</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="report-a-fault.html">Report a Fault</a></li>
-                    <li><a href="clientPortal.html">Client Portal</a></li>
-                </ul>
-            </div>
-            <div class="column-footer">
-                <h3>SERVICES</h3>
-                <ul class="footer-list">
-                    <li>Service 1</li>
-                    <li>Service 2</li>
-                    <li>Service 3</li>
-                </ul>
-                <div class="element-divider">
-                    <hr class="element-divider-separator"> 
-                </div>
-                <img>
-            </div>
-        </div>
-    </footer>
-    <footer>
-        <div class="footer-bottom">
-            &copy; 2025 Period Property Management. All rights reserved.
-        </div>
-    </footer>
+    
+    <div class="container content">
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+        <div class="box">
+        <div class="card">
+        <h1>Welcome back!</h1>
+        <p class="subtitle">Please enter your details to sign in.</p>
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyD6T4srw_0zzEwe8dNmkKQFlMSs88zjb3Q",
-    authDomain: "ppm-client-portal-dbd15.firebaseapp.com",
-    projectId: "ppm-client-portal-dbd15",
-    storageBucket: "ppm-client-portal-dbd15.firebasestorage.app",
-    messagingSenderId: "169801543759",
-    appId: "1:169801543759:web:7dda87639cea8ee43b3a3a"
-  };
+        <form>
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" placeholder="Enter your email" required>
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
+            <label for="password">Password <span class="required">*</span></label>
+            <input type="password" id="password" placeholder="Enter your password" required>
 
+            <div class="options">
+            <label><input type="checkbox" checked> Remember me</label>
+            <a href="#">Forgot your password ?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Log In</button>
+
+            <div class="divider">
+            <span>Or, Login with</span>
+            </div>
+
+            <button type="button" class="google-btn">
+            <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google" />
+            Sign up with google
+            </button>
+
+            <p class="register-text">Don't have an account ? <a href="#">Register here</a></p>
+        </form>
+        </div>
+  </div>
+        
+    
 </body>
+
+<style>
+    body {
+        background-image: url(images/pexels-jansimons10-6664607.jpg);
+    }
+</style>
 </html>

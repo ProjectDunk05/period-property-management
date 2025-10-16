@@ -386,6 +386,150 @@ h4 {
   border-radius: 0.375rem;
 }
 
+/*CLIENT PORTAL SIGN IN */
+
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 50%;
+  text-align: left;
+}
+
+.card h1 {
+  font-size: 26px;
+  color: #2c1250;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.required {
+  color: red;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d3d3e7;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: #6a38c2;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.options a {
+  color: #6a38c2;
+  text-decoration: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #6a38c2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.login-btn:hover {
+  background: #562ea4;
+}
+
+.divider {
+  text-align: center;
+  color: #aaa;
+  font-size: 13px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.register-text {
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.register-text a {
+  color: #6a38c2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
 
 /* MEDIA QUERIES */
 
@@ -472,6 +616,10 @@ h4 {
 
     .questions {
       width: 90%;
+    }
+
+    .card {
+      width: 80%;
     }
 
   }

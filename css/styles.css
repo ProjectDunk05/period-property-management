@@ -88,6 +88,10 @@ a {
     overflow: hidden;
 }
 
+.slides {
+  height: 37.5rem;
+}
+
 .slider img {
   display: none;
   width: 100%;         
@@ -208,7 +212,7 @@ ul.footer-list {
 
 /* INDEX.HTML */
 
-.intro {
+.split {
   display: flex;
   flex-direction: row;
   padding: 5rem 0;
@@ -219,13 +223,14 @@ ul.footer-list {
   display: flex;
   flex-direction: column;
   width: 47.5%;
-  gap: 2rem;
-  justify-content: center;
+  text-align: start;
 }
 
 .image-content {
   width: 47.5%;
-  height: 500px;
+  max-width: 37.5rem;
+  height: auto;
+  max-height: 50rem;
   border-radius: 2rem;
   overflow: hidden;
 }
@@ -233,7 +238,7 @@ ul.footer-list {
 .content img {
   display: block;
   width: 100%;         
-  height: 100%;
+  height: auto;
   object-fit: cover;   
   object-position: center;
 }
@@ -242,28 +247,18 @@ ul.footer-list {
   text-align: start;
 }
 
-.testimonial {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+/* SERVICES */
+
+.text h2 {
+  font-size: 3rem;
 }
 
-.testimonial-image {
-  width: 10rem;
-  height: 3.33rem;
-  padding-left: 0.5rem;
+.text li, h3, p {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
 }
 
-.testimonial-text {
-  font-style: italic;
-  color: grey;
-  font-weight: 500;
-}
 
-.testimonial-name {
-  padding-top: 0.5rem;
-  font-weight: 600;
-}
 
 /* FAQs */
 
@@ -561,6 +556,15 @@ input:focus {
     .container {
       max-width: 1024px;
     }
+
+    .text h2 {
+      font-size: 2rem;
+    }
+
+    .text li, h3, p {
+      font-size: 1rem;
+      margin-bottom: 0.5em;
+    }
   }
   
 /* lg */
@@ -635,6 +639,15 @@ input:focus {
 
     .card {
       width: 80%;
+    }
+
+    .text h2 {
+      font-size: 1.75rem;
+    }
+
+    .text li, h3, p {
+      font-size: 0.8rem;
+      margin-bottom: 0.5em;
     }
 
   }

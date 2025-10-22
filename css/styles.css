@@ -222,6 +222,7 @@ ul.footer-list {
 .text {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 47.5%;
   text-align: start;
 }
@@ -242,10 +243,6 @@ ul.footer-list {
   object-fit: cover;   
   object-position: center;
 }
-.content p {
-  font-size: 1.25rem;
-  text-align: start;
-}
 
 /* SERVICES */
 
@@ -254,8 +251,8 @@ ul.footer-list {
 }
 
 .text li, h3, p {
-  font-size: 1.5rem;
-  margin-bottom: 0.5em;
+  font-size: 1.6rem;
+  margin-bottom: 0.2em;
 }
 
 
@@ -562,8 +559,8 @@ input:focus {
     }
 
     .text li, h3, p {
-      font-size: 1rem;
-      margin-bottom: 0.5em;
+      font-size: 1.3rem;
+      margin-bottom: 0.2em;
     }
   }
   
@@ -646,8 +643,8 @@ input:focus {
     }
 
     .text li, h3, p {
-      font-size: 0.8rem;
-      margin-bottom: 0.5em;
+      font-size: 0.9rem;
+      margin-bottom: 0;
     }
 
   }

@@ -261,7 +261,6 @@ ul.footer-list {
   width: 100%;
   max-width: 60rem;
   margin: auto;        
-  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .emergency-item {
@@ -276,6 +275,7 @@ ul.footer-list {
 }
 
 .emergency-item .label {
+  width: 70%;
   color: #fdf9f5;
   padding: 0.9375rem 1.25rem;  
   font-size: 1rem;         
@@ -287,9 +287,10 @@ ul.footer-list {
 }
 
 .emergency-item .phone {
+  width: 30%;
   background: #fdf9f5;
   color: grey;
-  padding: 0.9375rem 1.5625rem; 
+  padding: 0.95rem 1.6rem; 
   text-decoration: none;
   font-weight: 600;
   font-size: 1.25rem;         
@@ -705,12 +706,24 @@ input:focus {
   .text {
     width: 100%;
   }
+
+  .emergency-item .label {
+    font-size: 0.8rem;
+  }
+
+  .emergency-item .phone {
+    font-size: 1rem;
+  }
   }
   
   /* sm */
   @media (max-width: 640px) {
     .container {
       max-width: 475px;
+    }
+
+    .emergency-item .label {
+      padding: 0 1.25rem;
     }
   }
   

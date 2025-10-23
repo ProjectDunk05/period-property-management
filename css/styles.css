@@ -255,7 +255,49 @@ ul.footer-list {
   margin-bottom: 0.2em;
 }
 
+/* EMERGENCIES */
 
+.emergency-container {
+  width: 100%;
+  max-width: 60rem;
+  margin: auto;        
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.emergency-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: grey;
+  border: solid grey 0.2rem;
+  margin-bottom: 0.625rem;     
+  border-radius: 0.25rem;      
+  overflow: hidden;
+}
+
+.emergency-item .label {
+  color: #fdf9f5;
+  padding: 0.9375rem 1.25rem;  
+  font-size: 1.25rem;         
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;               
+  letter-spacing: 0.03125rem;  
+}
+
+.emergency-item .phone {
+  background: #fdf9f5;
+  color: grey;
+  padding: 0.9375rem 1.5625rem; 
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;         
+}
+
+.emergency-item .phone:hover {
+  opacity: 0.85;
+}
 
 /* FAQs */
 

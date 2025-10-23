@@ -215,7 +215,7 @@ ul.footer-list {
 .split {
   display: flex;
   flex-direction: row;
-  padding: 5rem 0;
+  padding: 2rem 0;
   gap: 5%;
 }
 

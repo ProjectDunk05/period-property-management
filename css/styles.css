@@ -299,10 +299,6 @@ ul.footer-list {
   opacity: 0.85;
 }
 
-.stack {
-  display: flex;
-  flex-direction: column;
-}
 
 /* FAQs */
 

@@ -72,7 +72,7 @@ html {
     text-decoration: none;
 }
 
-a {
+.nav-links a {
     color: #111111;
     font-size: 1rem;
     text-decoration: none;
@@ -256,11 +256,24 @@ ul.footer-list {
 }
 
 /* EMERGENCIES */
+.description {
+  color: rgb(107 114 128);
+  text-align: left;
+  font-family: 'Monsterat';
+  text-align: center;
+}
+
+.text-link {
+  font-size: 1em;
+  font-weight: 600;
+  color: rgb(107 114 128);
+}
 
 .emergency-container {
   width: 100%;
   max-width: 60rem;
-  margin: auto;        
+  margin: auto;
+  padding-top: 4.375rem;        
 }
 
 .emergency-item {
@@ -358,15 +371,6 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   padding: 0rem 1rem;
-}
-
-.contact-intro > * + * {
-  margin-top: 1rem;
-}
-
-.contact-description {
-  color: rgb(107 114 128);
-  text-align: left;
 }
 
 .form-group-container {

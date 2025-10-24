@@ -51,48 +51,42 @@
 
             Create Access Key here 👉 https://web3forms.com/
         -->
-
+        
+        <p class="contact description">If you have a fault or a suggestion regarding your block, please fill in the form below and submit. Once we've received your request, we'll be in touch shortly.</p>
+        <p class="contact description">If your matter is urgent, please contact the relevent number listed on our <a href="emergencies.html" class="text-link">Emergencies</a> page.</p>
+        
         <section class="contact-section">
-        <div class="contact-intro">
-            <p class="contact-description">
-                If you have a fault or a suggestion regarding your block, please fill in the form below and submit. Once we've received your request, we'll be in touch shortly.
-            </p>
-            <p class="contact-description">
-                If you matter is urgent, please call 01323 894400 in the first instance.
-            </p>
-        </div>
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
 
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+                <input type="hidden" name="from_name" value="My Website" />
+                <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
 
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-            <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
-            <input type="hidden" name="from_name" value="My Website" />
-            <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
-
-            <div class="form-group-container">
-            <div class="form-group">
-                <label for="name" class="form-label">Name</label>
-                <input id="name" name="name" class="form-input" placeholder="Your full name" type="text" />
-            </div>
-            <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input id="email" name="email" class="form-input" placeholder="Your email address" type="email" />
-            </div>
-            <div class="form-group">
-                <label for="phone" class="form-label">Phone</label>
-                <input id="phone" name="phone" class="form-input" placeholder="+44 71234567" type="text" />
-            </div>
-            <div class="form-group">
-                <label for="address" class="form-label">Address</label>
-                <input id="address" name="address" class="form-input" placeholder="Your address" type="text" />
-            </div>
-            <div class="form-group">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-textarea" id="message" name="message" placeholder="Please provide us with as much information as possible for the fault you are reporting"></textarea>
-            </div>
-            </div>
-            <button class="form-submit" type="submit">Submit</button>
-        </form>
+                <div class="form-group-container">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input id="name" name="name" class="form-input" placeholder="Your full name" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" class="form-input" placeholder="Your email address" type="email" />
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input id="phone" name="phone" class="form-input" placeholder="+44 71234567" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="address" class="form-label">Address</label>
+                    <input id="address" name="address" class="form-input" placeholder="Your address" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Please provide us with as much information as possible for the fault you are reporting"></textarea>
+                </div>
+                </div>
+                <button class="form-submit" type="submit">Submit</button>
+            </form>
 
         </section>
     </div>

@@ -72,11 +72,14 @@ html {
     text-decoration: none;
 }
 
-.nav-links a {
+
+
+.nav-regular {
     color: #111111;
     font-size: 1.25rem;
     text-decoration: none;
 }
+
 
 /* IMG SLIDER */
 
@@ -792,16 +795,26 @@ input:focus {
     font-family: 'Helvetica Neue', Arial, sans-serif;
   }
 
-  /* Change portal button when not in hamburger menu */
+  /* style portal button out/in hamburger menu */
   @media (min-width: 1024px) {
     .portalButtonSite {
       padding: 12px;
       background: #111111;
-      color: white;
+      color: white; 
       border: none;
       border-radius: 6px;
       font-weight: 600;
+      text-decoration: none;
       cursor: pointer;
       margin-left: 2rem;
     }
   }
+
+  @media (max-width: 1024px) {
+    .portalButtonSite {
+    color: #111111;
+    font-size: 1.25rem;
+    text-decoration: none;
+    }
+  }
+  

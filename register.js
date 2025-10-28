@@ -40,6 +40,7 @@ submit.addEventListener("click", function (event) {
       // Signed up 
       const user = userCredential.user;
       alert("creating account...")
+      window.location.href ="account-created.html";
       // ...
     })
     .catch((error) => {

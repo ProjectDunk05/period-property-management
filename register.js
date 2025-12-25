@@ -33,7 +33,7 @@ async function checkAndRedirectForProfile(user) {
             // **Crucially, redirect to your profile completion page here.**
             // For now, let's use a placeholder. You'll replace '/complete-profile.html'
             // with the actual path to your profile completion form.
-            window.location.href = "account-created.html";
+            window.location.href = "profileCompletion.html";
         } else {
             // Profile document EXISTS
             console.log('Profile for user', user.uid, 'is complete.', docSnap.data());

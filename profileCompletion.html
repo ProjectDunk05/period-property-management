@@ -14,8 +14,17 @@
         <div class="box">
             <div class="card">
                 <h1>Account Successfully Created!</h1>
-                <p class="subtitle">Please press the button below to be redirected to the sign in page.</p>
-                <a href="clientPortal.html" class="login-btn" id="submit">Sign In</a>
+                <p class="subtitle">Please fill in the form below with the correct details. We need your FULL NAME and ADDRESS so we can loacte the specific files that are relevent to you and your property</p>
+                <form>
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="string" id="name" placeholder="Enter your Full Name" required>
+
+                        <label for="address">Address <span class="required">*</span></label>
+                        <input type="string" id="address" placeholder="Enter your Address" required>
+
+                        <button type="submit" class="login-btn" id="submit">Confirm</button>
+                </form>
+            
             </div>
         </div>
     </div>

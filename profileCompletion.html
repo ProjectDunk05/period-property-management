@@ -7,6 +7,7 @@
     <title>Period Property Management</title>
     <link rel="stylesheet" href="css/modern-normalise.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="profileCompletion.js" defer></script>
 </head>
 
 <body>
@@ -15,12 +16,12 @@
             <div class="card">
                 <h1>Account Successfully Created!</h1>
                 <p class="subtitle">Please fill in the form below with the correct details. We need your FULL NAME and ADDRESS so we can loacte the specific files that are relevent to you and your property</p>
-                <form>
+                <form id="profile-form">
                         <label for="name">Full Name <span class="required">*</span></label>
                         <input type="string" id="name" placeholder="e.g. John Smith" required>
 
                         <label for="postCode">Post Code <span class="required">*</span></label>
-                        <input type="string" id="address" placeholder="e.g. BN11AB" required>
+                        <input type="string" id="postCode" placeholder="e.g. BN11AB" required>
 
                         <label for="address">Address <span class="required">*</span></label>
                         <input type="string" id="address" placeholder="e.g. Flat 1, 1 Ship Street" required>

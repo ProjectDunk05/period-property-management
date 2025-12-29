@@ -19,7 +19,6 @@ const auth = getAuth(app);
 const db = getFirestore(app); // Initialize Firestore
 
 // Helper function to handle profile check and redirection
-// This function will be expanded in later steps (Steps 2 and 3)
 async function checkAndRedirectForProfile(user) {
     const userProfileRef = doc(db, 'userProfiles', user.uid);
 
@@ -30,16 +29,13 @@ async function checkAndRedirectForProfile(user) {
             // Profile document DOES NOT exist in Firestore
             console.log('Profile for user', user.uid, 'is incomplete. Redirecting to profile completion form.');
             alert("Account created! Please complete your profile.");
-            // **Crucially, redirect to your profile completion page here.**
-            // For now, let's use a placeholder. You'll replace '/complete-profile.html'
-            // with the actual path to your profile completion form.
             window.location.href = "profileCompletion.html";
         } else {
             // Profile document EXISTS
             console.log('Profile for user', user.uid, 'is complete.', docSnap.data());
             alert("Account created and profile is complete. Welcome!");
             // User has a complete profile, allow them into the main app dashboard
-            window.location.href = "portalDashboard.html"; // Or your main app dashboard
+            window.location.href = "portalDashboard.html"; 
         }
     } catch (error) {
         console.error('Error checking profile status:', error.message);
@@ -53,7 +49,7 @@ async function checkAndRedirectForProfile(user) {
 
 //submit button
 const submit = document.getElementById('submit');
-submit.addEventListener("click", async function (event) { // Make the event listener async
+submit.addEventListener("click", async function (event) { 
   event.preventDefault();
 
   //inputs

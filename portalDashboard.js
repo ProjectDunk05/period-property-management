@@ -68,8 +68,7 @@ async function loadUserFiles(userId) {
                 // Assuming your document fields are 'fileName', 'description', 'url'
                 // Adjust these field names if your actual Firestore documents use different names
                 listItem.innerHTML = `
-                    <strong>${data.fileName || 'Untitled Document'}</strong>
-                    <p>${data.description || 'No description available.'}</p>
+                    <strong>${data.title || 'Untitled Document'}</strong>
                     ${data.url ? `<a href="${data.url}" target="_blank">View Document</a>` : '<p>No direct link available</p>'}
                 `;
                 userFilesListElement.appendChild(listItem);

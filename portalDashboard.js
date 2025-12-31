@@ -31,8 +31,8 @@ async function handleSignOut() {
     try {
         await signOut(auth);
         console.log('User signed out.');
-        // Redirect to your public home page or login page after logout
-        window.location.href = "index.html"; // Or "clientPortal.html" if that's your login
+        // Redirect to your public home page after logout
+        window.location.href = "index.html"; 
     } catch (error) {
         console.error("Error signing out:", error);
         alert('Failed to sign out. Please try again.');
@@ -42,7 +42,7 @@ async function handleSignOut() {
 // Attach event listener to "Return to Site" button
 if (returnToSiteButton) {
     returnToSiteButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default link behavior
+        event.preventDefault(); 
         handleSignOut();
     });
 }
@@ -54,8 +54,6 @@ async function loadUserFiles(userId) {
 
     try {
         // Firestore Collection Group Query to search all 'documents' subcollections
-        // IMPORTANT: This query requires an index in Firestore.
-        // If you get an error, Firebase Console will provide a link to create it.
         const q = query(collectionGroup(db, 'documents'), where('allowedUsers', 'array-contains', userId));
         const querySnapshot = await getDocs(q);
 
@@ -65,8 +63,7 @@ async function loadUserFiles(userId) {
             querySnapshot.forEach((docSnap) => {
                 const data = docSnap.data();
                 const listItem = document.createElement('li');
-                // Assuming your document fields are 'fileName', 'description', 'url'
-                // Adjust these field names if your actual Firestore documents use different names
+                //Display file title and download url
                 listItem.innerHTML = `
                     <strong>${data.title || 'Untitled Document'}</strong>
                     ${data.url ? `<a href="${data.url}" target="_blank">View Document</a>` : '<p>No direct link available</p>'}
@@ -105,20 +102,20 @@ onAuthStateChanged(auth, async (user) => {
                 console.log('Profile for user', user.uid, 'is incomplete. Redirecting to profile completion form.');
                 alert("Your profile is incomplete. Please complete it to access the dashboard.");
                 window.location.href = "profileCompletion.html"; // Redirect to profile completion
-                return; // Stop further execution
+                return; 
             } else {
                 // Profile document EXISTS and is complete!
                 const profileData = docSnap.data();
                 console.log('Profile for user', user.uid, 'is complete.', profileData);
 
-                // 1. Welcome user with their fullName
+                // Welcome user with their fullName
                 welcomeMessageElement.textContent = `Welcome, ${profileData.fullName}!`;
 
                 // Hide loading message and show dashboard content
                 dashboardLoadingMessageElement.classList.add('hidden');
                 dashboardContentElement.classList.remove('hidden');
 
-                // 2. Load and display user's authorized files
+                // Load and display user's authorized files
                 await loadUserFiles(user.uid);
 
                 // Any other dashboard-specific functions you might add later

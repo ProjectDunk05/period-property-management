@@ -504,19 +504,6 @@ input:focus {
   border-color: #6a38c2;
 }
 
-.options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  margin-bottom: 20px;
-}
-
-.options a {
-  color: #6a38c2;
-  text-decoration: none;
-}
-
 .login-btn {
   width: 100%;
   padding: 12px;
@@ -527,6 +514,7 @@ input:focus {
   font-weight: 600;
   cursor: pointer;
   margin-bottom: 20px;
+  margin-top: 16px;
 }
 
 .login-btn:hover {

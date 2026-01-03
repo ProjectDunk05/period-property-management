@@ -215,28 +215,94 @@ ul.footer-list {
 
 /* INDEX.HTML */
 
+.background-img-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.background-img-text img {
+  display: block;
+  width: 100%;         
+  height: 100%;
+  object-fit: cover;   
+  object-position: center; 
+}
+
+.background-img-text-header {
+  position: absolute;       
+  top: 2rem; 
+  right: 50%;
+  left: 2rem;
+  background-color: #fdf9f5;                          
+  color: grey;
+  padding: 2rem 2rem;
+  border-radius: inherit;
+}
+
+
+.background-img-text-header p {
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-align: start;
+  font-family: 'Monsterat';
+  margin-bottom: 0.5rem;
+}
+
+
+/* SERVICES */
+
+.text h2 {
+  font-size: 2rem;
+}
+
+.text li, h3, p {
+  font-size: 1.6rem;
+  margin-bottom: 0.2em;
+}
+
 .split {
   display: flex;
   flex-direction: row;
-  padding: 2rem 0;
-  gap: 5%;
+ 
 }
 
 .text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 47.5%;
+  width: 50%;
   text-align: start;
+  background: grey;
+  color: #fdf9f5;
+}
+
+.text.top {
+  padding: 2rem 1rem 2rem 2rem;
+  border-radius: 2rem 0 0 2rem ;
+}
+
+.text.bottom {
+  border-radius: 0 2rem 2rem 0;
+  padding: 2rem 2rem 2rem 1rem;
 }
 
 .image-content {
-  width: 47.5%;
+  width: 50%;
   max-width: 37.5rem;
   height: auto;
   max-height: 50rem;
-  border-radius: 2rem;
   overflow: hidden;
+}
+.image-content.top {
+  border-radius: 0 2rem  2rem 0;
+}
+
+.image-content.bottom {
+  border-radius: 2rem 0 0 2rem;
 }
 
 .content img {
@@ -245,17 +311,6 @@ ul.footer-list {
   height: auto;
   object-fit: cover;   
   object-position: center;
-}
-
-/* SERVICES */
-
-.text h2 {
-  font-size: 3rem;
-}
-
-.text li, h3, p {
-  font-size: 1.6rem;
-  margin-bottom: 0.2em;
 }
 
 /* EMERGENCIES */

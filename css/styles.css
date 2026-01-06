@@ -237,19 +237,9 @@ ul.footer-list {
   top: 2rem; 
   right: 50%;
   left: 2rem;
-  background-color: #fdf9f5;                          
-  color: grey;
-  padding: 2rem 2rem;
-  border-radius: inherit;
-}
-
-
-.background-img-text-header p {
-  font-size: 1.75rem;
-  font-weight: 500;
+  color: #fdf9f5;                          
   text-align: start;
-  font-family: 'Monsterat';
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
 }
 
 

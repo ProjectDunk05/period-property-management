@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Period Property Management</title>
     <link rel="stylesheet" href="css/modern-normalise.css">
     <link rel="stylesheet" href="css/styles.css">
-     <script src="js/scripts.js" defer></script>
+    <script src="js/scripts.js" defer></script>
 </head>
+
 <body>
     <div class="container header">
         <div class="headerBar">
@@ -33,7 +35,7 @@
                     <li><a href="portalSignIn.html" class="portalButtonSite">Client Portal</a></li>
                 </ul>
             </div>
-        </div>    
+        </div>
     </div>
     <div class="fullscreen image">
         <div class="static">
@@ -48,24 +50,78 @@
         <div class="questions">
             <div class="pair">
                 <div class="question">
-                    <h4>How long does it take Period Property Management to take over management of a building?</h4>
+                    <h4>Water Escapes and Leaks</h4>
                     <span class="toggle-icon">+</span>
                 </div>
-                <p class="answer">We can have your building set up within 7 working days of receiving the formal request to take over. If there is an urgent requirement we can take over a building in as little as 1 working day.</p>
+
+                <!-- Entire content div hidden initially -->
+                <div class="answer">
+                    <h3>Water Escapes and Leaks</h3>
+                    <p>Check that your cold water stop cock operates correctly at least once a year. Minor leaks between
+                        flats, such as a defective bath seal, can impact the building insurance premium. If insurance
+                        claims were submitted for every leak, premiums would be significantly higher, and many insurers
+                        exclude water-related claims.</p>
+
+                    <h3>Liabilities for Lessees</h3>
+                    <p>To avoid misunderstandings, the following clarifies Lessee responsibilities:</p>
+                    <ul>
+                        <li>The uninsured excess is recoverable from the Lessee responsible, even if the damage occurred
+                            accidentally. This aligns with guidance from the Royal Institution of Chartered Surveyors
+                            (RICS).</li>
+                        <li>Where water leaks from one flat cause damage to another, it may be appropriate to:
+                            <ul>
+                                <li>Arrange an electrical safety check of the affected flat(s).</li>
+                                <li>Supply a dehumidifier if necessary to speed the drying process.</li>
+                                <li>Instruct a contractor to repair the affected areas.</li>
+                            </ul>
+                            The total cost of these activities, or the insurance excess, will be sought from the
+                            responsible party via the next service charge invoice.
+                        </li>
+                        <li>Repairing the root cause of the leak is the responsibility of the Lessee of the flat where
+                            the water originated.</li>
+                        <li>Damage to contents or personal possessions is not covered by the building’s insurance policy
+                            and usually falls outside Freehold obligations under the Lease. Lessees are advised to
+                            obtain contents insurance.</li>
+                    </ul>
+
+                    <h3>Insurance Considerations</h3>
+                    <p>Damage caused by incidents such as a broken pipe or an overflowing washing machine affecting
+                        electrics, paintwork, or wallpaper in the flat below typically forms part of a buildings
+                        insurance claim.</p>
+                    <p>Where the cause of the water escape is a fault in the building or communal pipework (including
+                        pipes passing through a flat), the repair of defects and damage to fixed installations or
+                        decorative finishes (but not contents) will be funded from the service charge and, if
+                        appropriate, by means of an insurance claim.</p>
+                </div>
             </div>
+
+            <!-- Modal overlay -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="modal-close" class="modal-close">&times;</span>
+                    <div id="modal-text"></div>
+                </div>
+            </div>
+
             <div class="pair">
                 <div class="question">
-                    <h4>Will Period Property Management act as Company Secretary or Director of our Management Company?</h4>
+                    <h4>Will Period Property Management act as Company Secretary or Director of our Management Company?
+                    </h4>
                     <span class="toggle-icon">+</span>
                 </div>
-                <p class="answer">Period Property Management can act as the Company Secretary and nominee Directors (where we would full fill the legal duties of the role but not make any decisions) if this is required. If you prefer, you may change the registered office of the Company to our Company address so that we are made aware of any filing requirements. We can file annual returns and accounts to Company House as required..</p>
+                <p class="answer">Period Property Management can act as the Company Secretary and nominee Directors
+                    (where we would full fill the legal duties of the role but not make any decisions) if this is
+                    required. If you prefer, you may change the registered office of the Company to our Company address
+                    so that we are made aware of any filing requirements. We can file annual returns and accounts to
+                    Company House as required..</p>
             </div>
             <div class="pair">
                 <div class="question">
                     <h4>How can you convince us that you can offer a quality service at a fair cost?</h4>
                     <span class="toggle-icon">+</span>
                 </div>
-                <p class="answer">Appoint us and we will prove it. We are an expanding Company as freeholder, leaseholders, solicitors and estate agents have recommended us to new clients.</p>
+                <p class="answer">Appoint us and we will prove it. We are an expanding Company as freeholder,
+                    leaseholders, solicitors and estate agents have recommended us to new clients.</p>
             </div>
             <div class="pair">
                 <div class="question">
@@ -79,30 +135,39 @@
                     <h4>What if I have a problem out of your office opening hours?</h4>
                     <span class="toggle-icon">+</span>
                 </div>
-                <p class="answer">Please call us on 07727256984 if you have an emergency issue, you will then be directed to the appropriate contact to resolve the matter.</p>
+                <p class="answer">Please call us on 07727256984 if you have an emergency issue, you will then be
+                    directed to the appropriate contact to resolve the matter.</p>
             </div>
             <div class="pair">
                 <div class="question">
                     <h4>What is a service charge and why do I have to pay it?</h4>
                     <span class="toggle-icon">+</span>
                 </div>
-                <p class="answer">The service charge are the costs of maintaining and insuring the communal areas of your building. Within your Lease or Transfer it will specify exactly what the service charge is to contribute to as well as providing you with further details of what your financial responsibilities are.</p>
+                <p class="answer">The service charge are the costs of maintaining and insuring the communal areas of
+                    your building. Within your Lease or Transfer it will specify exactly what the service charge is to
+                    contribute to as well as providing you with further details of what your financial responsibilities
+                    are.</p>
             </div>
-                <div class="pair">
+            <div class="pair">
                 <div class="question">
                     <h4>What happens if I don't pay my service charge?</h4>
                     <span class="toggle-icon">+</span>
                 </div>
-                <p class="answer">You are obligated under the terms of your Lease/Transfer to pay your service charge and may face legal proceedings if you fail to comply. If you are having difficulties in paying your service charge, please contact us immediately and we will do our best to help you.</p>
+                <p class="answer">You are obligated under the terms of your Lease/Transfer to pay your service charge
+                    and may face legal proceedings if you fail to comply. If you are having difficulties in paying your
+                    service charge, please contact us immediately and we will do our best to help you.</p>
             </div>
             <div class="pair">
                 <div class="question">
                     <h4>If I am not happy with your service, how can I make a more formal complaint?</h4>
                     <span class="toggle-icon">+</span>
                 </div>
-                <p class="answer">Whilst we hope to make all our clients happy with our services, we are also happy to look into your issue with a view to formally resolving it. You can download a copy of our complaints procedure here: Complaints Procedure, or contact us at info@periodpropetymanagement.com and you will be sent our procedure by email.</p>
+                <p class="answer">Whilst we hope to make all our clients happy with our services, we are also happy to
+                    look into your issue with a view to formally resolving it. You can download a copy of our complaints
+                    procedure here: Complaints Procedure, or contact us at info@periodpropetymanagement.com and you will
+                    be sent our procedure by email.</p>
             </div>
-           
+
         </div>
 
 
@@ -111,67 +176,67 @@
     <footer class="container footer">
         <div class="logo-footer">
             <a href="index.html">
-                    <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
+                <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
             </a>
         </div>
         <dic class="element-divider">
-            <hr class="element-divider-separator"> 
-        </div>
-        <div class="footer-container">
-            <div class="column-footer">
-                <div class="phone">
-                    <h3>PHONE:</h3>
-                    <P>01273 563214</P>
+            <hr class="element-divider-separator">
+            </div>
+            <div class="footer-container">
+                <div class="column-footer">
+                    <div class="phone">
+                        <h3>PHONE:</h3>
+                        <P>01273 563214</P>
+                    </div>
+                    <div class="emergency-number">
+                        <h3>EMERGENCY NUMBER:</h3>
+                        <ul class="footer-list">
+                            <li>Mon-Fri 18.00-05.00</li>
+                            <li>Sat-Sun 24 hrs</li>
+                            <li>Please call 07727256984</li>
+                        </ul>
+                    </div>
+                    <div class="email">
+                        <h3>EMAIL:</h3>
+                        <p>periodpropertymanagement@gmail.com</p>
+                    </div>
                 </div>
-                <div class="emergency-number">
-                    <h3>EMERGENCY NUMBER:</h3>
+                <div class="column-footer">
+                    <h3>ADDRESS</h3>
+                    <p>
+                        Period Property Management LTD<br>
+                        25 New Church Road,<br>
+                        Hove, BN41 1LP
+                    </p>
+                    <p>
+                        Company Reg Number: 9632750<br>
+                        Company VAT Number: 218017337
+                    </p>
+                </div>
+                <div class="column-footer">
+                    <h3>NAVIGATION</h3>
                     <ul class="footer-list">
-                        <li>Mon-Fri 18.00-05.00</li>
-                        <li>Sat-Sun 24 hrs</li>
-                        <li>Please call 07727256984</li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="emergencies.html">Emergencies</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="report-a-fault.html">Report a Fault</a></li>
+                        <li><a href="portalSignIn.html">Client Portal</a></li>
                     </ul>
                 </div>
-                <div class="email">
-                    <h3>EMAIL:</h3>
-                    <p>periodpropertymanagement@gmail.com</p>
+                <div class="column-footer">
+                    <h3>SERVICES</h3>
+                    <ul class="footer-list">
+                        <li>Service 1</li>
+                        <li>Service 2</li>
+                        <li>Service 3</li>
+                    </ul>
+                    <div class="element-divider">
+                        <hr class="element-divider-separator">
+                    </div>
+                    <img>
                 </div>
             </div>
-            <div class="column-footer">
-                <h3>ADDRESS</h3>
-                <p>
-                    Period Property Management LTD<br>
-                    25 New Church Road,<br>
-                    Hove, BN41 1LP
-                </p>
-                <p>
-                    Company Reg Number: 9632750<br>
-                    Company VAT Number: 218017337
-                </p>
-            </div>
-            <div class="column-footer">
-                <h3>NAVIGATION</h3>
-                <ul class="footer-list">
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="emergencies.html">Emergencies</a></li>
-                    <li><a href="faqs.html">FAQs</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="report-a-fault.html">Report a Fault</a></li>
-                    <li><a href="portalSignIn.html">Client Portal</a></li>
-                </ul>
-            </div>
-            <div class="column-footer">
-                <h3>SERVICES</h3>
-                <ul class="footer-list">
-                    <li>Service 1</li>
-                    <li>Service 2</li>
-                    <li>Service 3</li>
-                </ul>
-                <div class="element-divider">
-                    <hr class="element-divider-separator"> 
-                </div>
-                <img>
-            </div>
-        </div>
     </footer>
     <footer>
         <div class="footer-bottom">
@@ -180,4 +245,5 @@
     </footer>
 
 </body>
+
 </html>

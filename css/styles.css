@@ -22,6 +22,18 @@ html {
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+ h1, h2, h3, h4 {
+  font-family:"Playfair Display";
+ }
+
+ p, li, a, span {
+  font-family: "Source Sans 3", sans-serif;
+ }
 
 /* HEADER */
 
@@ -272,8 +284,8 @@ a {
   font-size: 2rem;
 }
 
-.text li,
-h3,
+.text li, .text 
+h3, .text
 p {
   font-size: 1.6rem;
   margin-bottom: 0.2em;
@@ -333,7 +345,6 @@ p {
 .description {
   color: rgb(107 114 128);
   text-align: left;
-  font-family: 'Monsterat';
   text-align: center;
 }
 
@@ -1051,7 +1062,6 @@ input:focus {
 body {
   background-color: #f6f6f6;
   margin: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* style portal button out/in hamburger menu */

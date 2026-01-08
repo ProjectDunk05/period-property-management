@@ -22,18 +22,25 @@ html {
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
+
 /* FONTS */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
- h1, h2, h3, h4 {
-  font-family:"Playfair Display";
- }
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display";
+}
 
- p, li, a, span {
+p,
+li,
+a,
+span {
   font-family: "Source Sans 3", sans-serif;
- }
+}
 
 /* HEADER */
 
@@ -83,6 +90,11 @@ html {
   gap: 1.5rem;
   list-style: none;
   text-decoration: none;
+}
+
+.nav-links a {
+  font-size: 1.25rem;
+  font-weight: 900;
 }
 
 
@@ -212,10 +224,21 @@ ul.footer-list {
   font-size: 0.8rem;
 }
 
+.column-footer h3 {
+  font-size: 1.5rem;
+}
+
 .column-footer p,
-li,
-a {
-  font-size: 1rem;
+.column-footer li,
+.column-footer a {
+  font-size: 1.25rem;
+  color: #111111;
+  font-weight: 900;
+}
+
+.column-footer a {
+  text-decoration: none;
+
 }
 
 .footer img {
@@ -276,6 +299,7 @@ a {
   gap: 1rem;
   color: #fdf9f5;
   border-radius: 0.5rem;
+  font-size: 1.5rem;
 }
 
 /* SERVICES */
@@ -284,9 +308,9 @@ a {
   font-size: 2rem;
 }
 
-.text li, .text 
-h3, .text
-p {
+.text li,
+.text h3,
+.text p {
   font-size: 1.6rem;
   margin-bottom: 0.2em;
 }
@@ -344,7 +368,7 @@ p {
 /* EMERGENCIES */
 .description {
   color: rgb(107 114 128);
-  text-align: left;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -411,11 +435,11 @@ p {
   padding-bottom: 3.75rem;
 }
 
-h4 {
+.question h4 {
   text-align: start;
   width: 90%;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: grey;
 }
 
@@ -536,6 +560,7 @@ h4 {
 .form-label {
   margin-bottom: 0.5rem;
   text-align: left;
+  font-size: 1rem;
 }
 
 .form-input,
@@ -789,6 +814,10 @@ input:focus {
     max-width: 1024px;
   }
 
+  .nav-links {
+    gap: 1rem;
+  }
+
   .nav-links a {
     font-size: 1rem;
   }
@@ -989,6 +1018,10 @@ input:focus {
     max-width: 475px;
   }
 
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
   .background-img-text-header {
     font-size: 1rem;
   }
@@ -1018,6 +1051,10 @@ input:focus {
 @media (max-width: 475px) {
   .container {
     width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
   }
 
   .background-img-text-header {

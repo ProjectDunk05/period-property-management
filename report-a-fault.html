@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Period Property Management</title>
     <link rel="stylesheet" href="css/modern-normalise.css">
     <link rel="stylesheet" href="css/styles.css">
-     <script src="js/scripts.js" defer></script>
+    <script src="js/reportAFault.js" defer></script>
 </head>
+
 <body>
     <div class="container header">
         <div class="headerBar">
@@ -33,7 +35,7 @@
                     <li><a href="portalSignIn.html" class="portalButtonSite">Client Portal</a></li>
                 </ul>
             </nav>
-        </div>    
+        </div>
     </div>
     <div class="fullscreen image">
         <div class="static">
@@ -45,115 +47,121 @@
         </div>
     </div>
     <div class="container content">
-                <!-- 
-            This is a working contact form. To receive email, 
-            Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+        <p class="contact description">If you have a fault or a suggestion regarding your block, please fill in the form
+            below and submit. Once we've received your request, we'll be in touch shortly.</p>
+        <p class="contact description">If your matter is urgent, please contact the relevent number listed on our <a
+                href="emergencies.html" class="text-link">Emergencies</a> page.</p>
 
-            Create Access Key here 👉 https://web3forms.com/
-        -->
-        
-        <p class="contact description">If you have a fault or a suggestion regarding your block, please fill in the form below and submit. Once we've received your request, we'll be in touch shortly.</p>
-        <p class="contact description">If your matter is urgent, please contact the relevent number listed on our <a href="emergencies.html" class="text-link">Emergencies</a> page.</p>
-        
         <section class="contact-section">
-                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <form id="form" class="contact-form">
 
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-                <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
-                <input type="hidden" name="from_name" value="My Website" />
-                <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
+                <!-- Required Web3Forms fields -->
+                <input type="hidden" name="access_key" value="6e536162-4dc6-4a3e-bf53-222e739384b9">
+                <input type="hidden" name="subject" value="New Report a Fault Form Submission">
+                <input type="hidden" name="from_name" value="FAULT REPORTED">
+                <input type="hidden" name="form_loaded_at" id="form_loaded_at">
+                <input type="hidden" name="js_enabled" value="false">
 
+                <!-- Honeypot field -->
+                <div style="position:absolute; left:-9999px; top:-9999px;">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company">
+                </div>
+
+                <!-- Visible Form Fields -->
                 <div class="form-group-container">
-                <div class="form-group">
-                    <label for="name" class="form-label">Name</label>
-                    <input id="name" name="name" class="form-input" placeholder="Your full name" type="text" />
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input id="name" name="name" class="form-input" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input id="phone" name="phone" class="form-input" placeholder="+44 71234567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="form-label">Address</label>
+                        <input id="address" name="address" class="form-input" placeholder="Your address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Describe the fault" required></textarea>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input id="email" name="email" class="form-input" placeholder="Your email address" type="email" />
-                </div>
-                <div class="form-group">
-                    <label for="phone" class="form-label">Phone</label>
-                    <input id="phone" name="phone" class="form-input" placeholder="+44 71234567" type="text" />
-                </div>
-                <div class="form-group">
-                    <label for="address" class="form-label">Address</label>
-                    <input id="address" name="address" class="form-input" placeholder="Your address" type="text" />
-                </div>
-                <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-textarea" id="message" name="message" placeholder="Please provide us with as much information as possible for the fault you are reporting"></textarea>
-                </div>
-                </div>
-                <button class="form-submit" type="submit">Submit</button>
-            </form>
 
+                <button type="submit">Submit</button>
+                <div id="result" style="display:none;"></div>
+            </form>
         </section>
+
     </div>
     <footer class="container footer">
         <div class="logo-footer">
             <a href="index.html">
-                    <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
+                <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
             </a>
         </div>
         <dic class="element-divider">
-            <hr class="element-divider-separator"> 
-        </div>
-        <div class="footer-container">
-            <div class="column-footer">
-                <div class="phone">
-                    <h3>PHONE:</h3>
-                    <P>01273 563214</P>
+            <hr class="element-divider-separator">
+            </div>
+            <div class="footer-container">
+                <div class="column-footer">
+                    <div class="phone">
+                        <h3>PHONE:</h3>
+                        <P>01273 563214</P>
+                    </div>
+                    <div class="emergency-number">
+                        <h3>EMERGENCY NUMBER:</h3>
+                        <ul class="footer-list">
+                            <li>Mon-Fri 18.00-05.00</li>
+                            <li>Sat-Sun 24 hrs</li>
+                            <li>Please call 07727256984</li>
+                        </ul>
+                    </div>
+                    <div class="email">
+                        <h3>EMAIL:</h3>
+                        <p>periodpropertymanagement@gmail.com</p>
+                    </div>
                 </div>
-                <div class="emergency-number">
-                    <h3>EMERGENCY NUMBER:</h3>
+                <div class="column-footer">
+                    <h3>ADDRESS</h3>
+                    <p>
+                        Period Property Management LTD<br>
+                        25 New Church Road,<br>
+                        Hove, BN41 1LP
+                    </p>
+                    <p>
+                        Company Reg Number: 9632750<br>
+                        Company VAT Number: 218017337
+                    </p>
+                </div>
+                <div class="column-footer">
+                    <h3>NAVIGATION</h3>
                     <ul class="footer-list">
-                        <li>Mon-Fri 18.00-05.00</li>
-                        <li>Sat-Sun 24 hrs</li>
-                        <li>Please call 07727256984</li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="emergencies.html">Emergencies</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="report-a-fault.html">Report a Fault</a></li>
+                        <li><a href="portalSignIn.html">Client Portal</a></li>
                     </ul>
                 </div>
-                <div class="email">
-                    <h3>EMAIL:</h3>
-                    <p>periodpropertymanagement@gmail.com</p>
+                <div class="column-footer">
+                    <h3>SERVICES</h3>
+                    <ul class="footer-list">
+                        <li>Service 1</li>
+                        <li>Service 2</li>
+                        <li>Service 3</li>
+                    </ul>
+                    <div class="element-divider">
+                        <hr class="element-divider-separator">
+                    </div>
+                    <img>
                 </div>
             </div>
-            <div class="column-footer">
-                <h3>ADDRESS</h3>
-                <p>
-                    Period Property Management LTD<br>
-                    25 New Church Road,<br>
-                    Hove, BN41 1LP
-                </p>
-                <p>
-                    Company Reg Number: 9632750<br>
-                    Company VAT Number: 218017337
-                </p>
-            </div>
-            <div class="column-footer">
-                <h3>NAVIGATION</h3>
-                <ul class="footer-list">
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="emergencies.html">Emergencies</a></li>
-                    <li><a href="faqs.html">FAQs</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="report-a-fault.html">Report a Fault</a></li>
-                    <li><a href="portalSignIn.html">Client Portal</a></li>
-                </ul>
-            </div>
-            <div class="column-footer">
-                <h3>SERVICES</h3>
-                <ul class="footer-list">
-                    <li>Service 1</li>
-                    <li>Service 2</li>
-                    <li>Service 3</li>
-                </ul>
-                <div class="element-divider">
-                    <hr class="element-divider-separator"> 
-                </div>
-                <img>
-            </div>
-        </div>
     </footer>
     <footer>
         <div class="footer-bottom">
@@ -162,4 +170,5 @@
     </footer>
 
 </body>
+
 </html>

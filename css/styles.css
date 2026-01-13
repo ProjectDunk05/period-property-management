@@ -993,6 +993,7 @@ input:focus {
 
   .icon-indexText {
     font-size: 0.75rem;
+    padding: 1rem;
   }
 
   /* FOOTER */
@@ -1081,8 +1082,9 @@ input:focus {
   }
 
   .icon-indexText {
-    width: 100%;
-    font-size: 1rem;
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
   }
 
   /* EMERGENCIES */
@@ -1114,7 +1116,7 @@ input:focus {
 /* xs */
 @media (max-width: 475px) {
   .container {
-    width: 100%;
+    width: 90%;
   }
 
   .nav-links a {

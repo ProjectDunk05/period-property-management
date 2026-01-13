@@ -277,9 +277,9 @@ ul.footer-list {
 
 .background-img-text-header {
   position: absolute;
-  top: 2rem;
+  top: 2%;
   right: 50%;
-  left: 2rem;
+  left: 2%;
   color: grey;
   text-align: start;
   font-size: 3rem;
@@ -911,10 +911,16 @@ input:focus {
     width: 100%;
   }
 
+  /* INDEX */
   .background-img-text-header {
     font-size: 1.75rem;
   }
 
+  .icon-indexText {
+    font-size: 1.25rem;
+  }
+
+  /* STATIC BANNER */
   .static-header h1 {
     font-size: 2rem;
   }
@@ -965,11 +971,13 @@ input:focus {
     max-width: 640px;
   }
 
+  /* INDEX */
   .background-img-text-header {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
     font-size: 1.5rem;
+  }
+
+  .icon-indexText {
+    font-size: 0.75rem;
   }
 
   .image-content {
@@ -1021,9 +1029,22 @@ input:focus {
     font-size: 0.9rem;
   }
 
+  /* INDEX */
   .background-img-text-header {
     font-size: 1rem;
   }
+  
+  .threeBoxes {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .icon-indexText {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .
 
   .emergency-item .label {
     padding: 0 1.25rem;

@@ -360,6 +360,8 @@ ul.footer-list {
 
 /* EMERGENCIES */
 .description {
+  width: 90%;
+  margin: auto;
   color: rgb(107 114 128);
   font-size: 1.5rem;
   text-align: center;
@@ -375,7 +377,7 @@ ul.footer-list {
   width: 100%;
   max-width: 60rem;
   margin: auto;
-  padding-top: 4.375rem;
+  padding-top: 5%;
 }
 
 .emergency-item {
@@ -853,6 +855,7 @@ input:focus {
     max-width: 768px;
   }
 
+  /* HEADER */
   .logo {
     width: 80%;
     height: auto;
@@ -931,6 +934,11 @@ input:focus {
     font-size: 1rem;
   }
 
+  /* EMERGENCIES */
+  .description {
+    font-size: 1.25rem;
+  }
+
   /* FAQs */
   .questions {
     width: 90%;
@@ -1002,6 +1010,11 @@ input:focus {
     width: 100%;
   }
 
+  /* EMERGENCIES */
+  .description {
+    font-size: 1rem;
+  }
+
   .emergency-item .label {
     font-size: 0.8rem;
   }
@@ -1058,7 +1071,12 @@ input:focus {
     font-size: 1rem;
   }
 
-  . .emergency-item .label {
+  /* EMERGENCIES */
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .emergency-item .label {
     padding: 0 1.25rem;
   }
 

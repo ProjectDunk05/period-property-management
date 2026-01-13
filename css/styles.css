@@ -165,9 +165,9 @@ img.displaySlide {
 
 .static-header {
   position: absolute;
-  top: 75%;
+  bottom: 1%;
+  left: 1%;
   color: #fdf9f5;
-  padding: 1.5rem 1rem;
 }
 
 .static-header h1 {
@@ -818,6 +818,7 @@ input:focus {
     font-size: 2.45rem;
   }
 
+  /* STATIC IMAGE & HEADER BANNER */
   .static-header h1 {
     font-size: 2.5rem;
   }
@@ -925,13 +926,13 @@ input:focus {
     font-size: 1.25rem;
   }
 
-  /* STATIC BANNER */
+  /* STATIC IMAGE & HEADER BANNER */
   .static-header h1 {
     font-size: 2rem;
   }
 
   .static-header p {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   /* EMERGENCIES */
@@ -999,6 +1000,15 @@ input:focus {
   .column-footer li,
   .column-footer a {
     font-size: 0.75rem;
+  }
+
+  /* STATIC IMAGE & HEADER BANNER */
+  .static-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .static-header p {
+    font-size: 1rem;
   }
 
 

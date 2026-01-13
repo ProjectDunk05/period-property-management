@@ -424,8 +424,6 @@ ul.footer-list {
   width: 60%;
   margin: auto;
   gap: 2.5rem;
-  padding-top: 7.5rem;
-  padding-bottom: 3.75rem;
 }
 
 .question h4 {
@@ -933,7 +931,7 @@ input:focus {
     font-size: 1rem;
   }
 
-
+  /* FAQs */
   .questions {
     width: 90%;
   }

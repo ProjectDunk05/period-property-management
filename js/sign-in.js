@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 
 
@@ -46,9 +46,9 @@ async function checkAndRedirectForProfile(user) {
 }
 
 
-//submit button
-const submit = document.getElementById('submit');
-submit.addEventListener("click", async function (event) { 
+// Email/Password Sign-in
+const emailPasswordSubmit = document.getElementById('submit');
+emailPasswordSubmit.addEventListener("click", async function (event) {
   event.preventDefault();
 
   //inputs
@@ -56,12 +56,12 @@ submit.addEventListener("click", async function (event) {
   const password = document.getElementById('password').value;
 
   try {
-    alert("Attempting to sign in...");
+    alert("Attempting to sign in with email/password...");
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
     if (user) {
-        console.log('User signed in successfully:', user.uid);
+        console.log('User signed in successfully with email/password:', user.uid);
         // Call the helper function to check profile and redirect
         await checkAndRedirectForProfile(user);
     }
@@ -69,7 +69,42 @@ submit.addEventListener("click", async function (event) {
     const errorCode = error.code;
     const errorMessage = error.message;
     alert(`Error: ${errorMessage}`);
-    console.error('Sign-in error:', errorCode, errorMessage);
+    console.error('Email/Password Sign-in error:', errorCode, errorMessage);
   }
 });
+
+
+// Google Sign-in
+const googleSignInButton = document.getElementById('signInWithGoogle'); 
+if (googleSignInButton) {
+  googleSignInButton.addEventListener("click", async function (event) {
+    event.preventDefault();
+
+    const provider = new GoogleAuthProvider(); // Create a new Google Auth Provider instance
+
+    try {
+      alert("Attempting to sign in with Google...");
+      const result = await signInWithPopup(auth, provider); // Use signInWithPopup for a pop-up window
+      const user = result.user; // The signed-in user info
+
+      if (user) {
+        console.log('User signed in successfully with Google:', user.uid);
+        // Call the helper function to check profile and redirect
+        await checkAndRedirectForProfile(user);
+      }
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // Handle specific errors, e.g., if the user closes the pop-up
+      if (errorCode === 'auth/popup-closed-by-user') {
+        alert("Google Sign-in popup closed. Please try again.");
+      } else {
+        alert(`Error: ${errorMessage}`);
+      }
+      console.error('Google Sign-in error:', errorCode, errorMessage);
+    }
+  });
+} else {
+  console.warn("No button with id 'signInWithGoogle' found. Google Sign-in functionality will not be active.");
+}
 

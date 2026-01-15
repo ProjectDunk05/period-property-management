@@ -1,5 +1,9 @@
-// REPORT A FAULT
+// toggle function for hambuger menu display
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('active');
+}
 
+// REPORT A FAULT
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById('form');
   const result = document.getElementById('result');

@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js"; // Import Firestore functions
 
 // Your web app's Firebase configuration
@@ -35,21 +35,21 @@ async function checkAndRedirectForProfile(user) {
             console.log('Profile for user', user.uid, 'is complete.', docSnap.data());
             alert("Account created and profile is complete. Welcome!");
             // User has a complete profile, allow them into the main app dashboard
-            window.location.href = "portalDashboard.html"; 
+            window.location.href = "portalDashboard.html";
         }
     } catch (error) {
         console.error('Error checking profile status:', error.message);
         alert('Account created, but an error occurred checking profile status. Please try logging in again.');
         // Optionally, sign out the user if there's a critical error
         auth.signOut();
-        window.location.href = "clientPortal.html"; // Redirect to login
+        window.location.href = "portalSignIn.html"; // Redirect to login
     }
 }
 
 
-//submit button
-const submit = document.getElementById('submit');
-submit.addEventListener("click", async function (event) { 
+// Email/Password Registration
+const emailPasswordSubmit = document.getElementById('submit'); 
+emailPasswordSubmit.addEventListener("click", async function (event) {
   event.preventDefault();
 
   //inputs
@@ -65,12 +65,12 @@ submit.addEventListener("click", async function (event) {
   }
 
   try {
-    alert("creating account...");
+    alert("creating account with email/password...");
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
     if (user) {
-        console.log('User registered successfully:', user.uid);
+        console.log('User registered successfully with email/password:', user.uid);
         // Call the helper function to check profile and redirect
         await checkAndRedirectForProfile(user);
     }
@@ -78,6 +78,40 @@ submit.addEventListener("click", async function (event) {
     const errorCode = error.code;
     const errorMessage = error.message;
     alert(`Error: ${errorMessage}`);
-    console.error('Registration error:', errorCode, errorMessage);
+    console.error('Email/Password Registration error:', errorCode, errorMessage);
   }
 });
+
+
+// Google Registration/Sign-in
+const googleRegisterButton = document.getElementById('registerWithGoogle'); // Assuming you have a button with id="registerWithGoogle"
+if (googleRegisterButton) {
+  googleRegisterButton.addEventListener("click", async function (event) {
+    event.preventDefault();
+
+    const provider = new GoogleAuthProvider(); // Create a new Google Auth Provider instance
+
+    try {
+      alert("Attempting to register/sign in with Google...");
+      const result = await signInWithPopup(auth, provider); // Use signInWithPopup
+      const user = result.user; // The signed-in/registered user info
+
+      if (user) {
+        console.log('User registered/signed in successfully with Google:', user.uid);
+        // Call the helper function to check profile and redirect
+        await checkAndRedirectForProfile(user);
+      }
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      if (errorCode === 'auth/popup-closed-by-user') {
+        alert("Google Sign-in popup closed. Please try again.");
+      } else {
+        alert(`Error: ${errorMessage}`);
+      }
+      console.error('Google Registration/Sign-in error:', errorCode, errorMessage);
+    }
+  });
+} else {
+  console.warn("No button with id 'registerWithGoogle' found. Google registration functionality will not be active.");
+}

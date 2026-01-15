@@ -978,6 +978,17 @@ input:focus {
     font-size: 1.25rem;
   }
 
+  /* REPORT a FAULT */
+  .form-label {
+  margin-bottom: 0;
+  font-size: 0.75rem;
+}
+
+.form-input,
+.form-textarea {
+  font-size: 0.75rem;
+}
+
 }
 
 /* md */
@@ -1096,6 +1107,7 @@ input:focus {
     padding: 0 1.25rem;
   }
 
+  /* FAQs */
   .modal-content {
     padding: 0.5rem 1.25rem 1.25rem 1.25rem;
     border-radius: 0.75rem;
@@ -1111,6 +1123,7 @@ input:focus {
     font-size: 1rem;
     margin-top: 0.5rem;
   }
+
 }
 
 /* xs */

@@ -1,3 +1,8 @@
+// toggle function for hambuger menu display
+function toggleMenu() {
+    document.getElementById('nav-menu').classList.toggle('active');
+  }
+
 // FAQs toggle answer display when question clicked on 
 
 const questions = document.querySelectorAll(".question");

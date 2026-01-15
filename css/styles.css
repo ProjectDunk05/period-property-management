@@ -391,7 +391,7 @@ ul.footer-list {
   overflow: hidden;
 }
 
-.emergency-item .label {
+.label {
   width: 70%;
   color: #fdf9f5;
   padding: 0.9375rem 1.25rem;
@@ -403,17 +403,18 @@ ul.footer-list {
   letter-spacing: 0.03125rem;
 }
 
-.emergency-item .phone {
+.phone {
   width: 30%;
   background: #fdf9f5;
   color: grey;
   padding: 0.95rem 1.6rem;
+  flex: 1;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.25rem;
 }
 
-.emergency-item .phone:hover {
+.phone:hover {
   opacity: 0.85;
 }
 
@@ -1015,11 +1016,34 @@ input:focus {
   }
 
   .static-header p {
-    font-size: 1.25rem;
+    font-size: 1rem;
+  }
+
+  /* SERVICES */
+  .text h2 {
+    font-size: 1.75rem;
+  }
+
+  .text li,
+  .text h3,
+  .text p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  .text.top,
+  .text.bottom {
+    padding: 1rem;
+  }
+
+  .text ul {
+    padding-left: 1.5rem;
   }
 
   /* EMERGENCIES */
-  .description {
+  .description,
+  .label,
+  .phone {
     font-size: 1.25rem;
   }
 
@@ -1030,17 +1054,6 @@ input:focus {
 
   .card {
     width: 80%;
-  }
-
-  .text h2 {
-    font-size: 1.75rem;
-  }
-
-  .text li,
-  .text h3,
-  .text p {
-    font-size: 0.9rem;
-    margin-bottom: 0;
   }
 
   .modal-content {
@@ -1060,6 +1073,14 @@ input:focus {
   /* CONTACT US */
   .contact-box {
     width: 75%;
+  }
+
+  .contact-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-header p {
+    font-size: 0.9rem;
   }
 
   /* REPORT a FAULT */
@@ -1108,10 +1129,10 @@ input:focus {
   }
 
   .static-header p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
-
+  /* SERVICES */
   .image-content {
     display: none;
   }
@@ -1120,17 +1141,27 @@ input:focus {
     width: 100%;
   }
 
+  .text.top,
+  .text.bottom {
+    border-radius: 1.5rem;
+    padding: 1rem 2rem 2rem;
+  }
+
   /* EMERGENCIES */
-  .description {
+
+  .description,
+  .label,
+  .phone {
     font-size: 1rem;
   }
 
-  .emergency-item .label {
+  .label {
+    width: 80%;
     font-size: 0.8rem;
   }
 
-  .emergency-item .phone {
-    font-size: 1rem;
+  .phone {
+    width: 20%;
   }
 
   /* FAQs */
@@ -1160,6 +1191,23 @@ input:focus {
   .contact-box {
     width: 100%;
   }
+
+  .contact-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-header p {
+    font-size: 0.8rem;
+  }
+
+  .contact-card h2 {
+    font-size: 1rem;
+  }
+
+  .contact-card p {
+    font-size: 0.8rem;
+  }
+
 }
 
 /* sm */
@@ -1168,6 +1216,7 @@ input:focus {
     max-width: 475px;
   }
 
+  /* HEADER */
   .nav-links a {
     font-size: 0.9rem;
   }
@@ -1188,13 +1237,41 @@ input:focus {
     padding: 1rem;
   }
 
+  /* STATIC IMG & HEADER BANNER */
+  .static-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .static-header p {
+    font-size: 0.8rem;
+  }
+
+  /* SERVICES */
+  .text.top,
+  .text.bottom {
+    border-radius: 1.5rem;
+    padding: 0.75rem 1.75rem 1.75rem;
+  }
+
+  .text h2 {
+    font-size: 1.25rem;
+  }
+
+  .text li,
+  .text h3,
+  .text p {
+    font-size: 0.8rem;
+  }
+
   /* EMERGENCIES */
-  .description {
+  .description,
+  .label,
+  .phone {
     font-size: 0.8rem;
   }
 
   .emergency-item .label {
-    padding: 0 1.25rem;
+    padding: 0 0.5rem;
   }
 
   /* FAQs */
@@ -1226,14 +1303,27 @@ input:focus {
     width: 90%;
   }
 
+  /* HEADER */
   .nav-links a {
     font-size: 0.75rem;
   }
-
+ 
+  /* INDEX */
   .background-img-text-header {
     font-size: 0.75rem;
   }
 
+  /* EMERGENCIES */
+  .phone {
+    padding: 0.5rem 0;
+  }
+
+  .emergency-item .label {
+    font-size: 0.6rem;
+  }
+
+
+  /* FAQs */
   .modal-content {
     padding: 0.5rem 1rem 1rem 1rem;
     max-height: 90vh;

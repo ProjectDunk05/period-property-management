@@ -107,7 +107,7 @@ span {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  max-height: 80vh;
+  height: 80vh;
   margin: auto;
   overflow: hidden;
 }
@@ -1005,6 +1005,10 @@ input:focus {
   }
 
   /* INDEX */
+ .slider {
+  height: 60vh;
+ }
+
   .background-img-text-header {
     font-size: 1.75rem;
   }

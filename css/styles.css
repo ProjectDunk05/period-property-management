@@ -197,7 +197,6 @@ hr.element-divider-separator {
 .column-footer {
   display: flex;
   flex-direction: column;
-  flex-shrink: 1 1;
   margin-top: 1rem;
   gap: 1rem;
 }
@@ -225,6 +224,14 @@ ul.footer-list {
 .column-footer a {
   text-decoration: none;
 
+}
+
+.column-footer img {
+  width: 10rem;
+}
+
+.approved {
+  justify-content: center;
 }
 
 .footer img {

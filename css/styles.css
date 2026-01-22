@@ -306,14 +306,22 @@ ul.footer-list {
 /* SERVICES */
 
 .text h2 {
-  font-size: 2rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-.text li,
-.text h3,
-.text p {
+.text li {
   font-size: 1.6rem;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.2rem;
+}
+
+.text p, .text h3 {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.text h3 {
+  margin-top: 7rem;
 }
 
 .split {
@@ -325,7 +333,6 @@ ul.footer-list {
 .text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 50%;
   text-align: start;
   background: grey;
@@ -911,14 +918,15 @@ input:focus {
   }
 
   .text h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
-  .text li,
-  .text h3,
-  .text p {
+  .text li {
     font-size: 1.3rem;
-    margin-bottom: 0.2em;
+  }
+
+  .text p, .text h3 {
+    font-size: 1.5rem;
   }
 
   /* FOOTER */
@@ -1033,15 +1041,20 @@ input:focus {
 
   /* SERVICES */
   .text h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
-  .text li,
-  .text h3,
-  .text p {
+  .text li {
     font-size: 0.9rem;
-    margin-bottom: 0;
   }
+
+  .text p, .text h3 {
+    font-size: 1.25rem;
+  }
+
+  .text h3 {
+  margin-top: 2rem;
+}
 
   .text.top,
   .text.bottom {
@@ -1266,14 +1279,14 @@ input:focus {
   }
 
   .text h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .text li,
-  .text h3,
-  .text p {
-    font-size: 0.8rem;
+  .text h3, .text p {
+    font-size: 1rem;
   }
+
 
   /* EMERGENCIES */
   .description,

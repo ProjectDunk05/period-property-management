@@ -1067,9 +1067,12 @@ input:focus {
 
   /* EMERGENCIES */
   .description,
-  .label,
   .phone {
     font-size: 1.25rem;
+  }
+
+  .label {
+    font-size: 1rem;
   }
 
   /* FAQs */

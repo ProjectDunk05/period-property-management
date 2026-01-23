@@ -315,7 +315,8 @@ ul.footer-list {
   margin-bottom: 0.2rem;
 }
 
-.text p, .text h3 {
+.text p,
+.text h3 {
   font-size: 2rem;
   margin-top: 0.5rem;
 }
@@ -374,6 +375,14 @@ ul.footer-list {
 }
 
 /* EMERGENCIES */
+.heading {
+  color: rgb(107 114 128);
+  font-size: 2rem;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 .description {
   width: 90%;
   margin: auto;
@@ -392,7 +401,7 @@ ul.footer-list {
   width: 100%;
   max-width: 60rem;
   margin: auto;
-  padding-top: 5%;
+  padding: 5% 0;
 }
 
 .emergency-item {
@@ -433,6 +442,19 @@ ul.footer-list {
   opacity: 0.85;
 }
 
+.non-emergencies {
+  width: 90%;
+  margin: auto;
+  color: rgb(107 114 128);
+  font-size: 1.5rem;
+  text-align: start;
+  gap: 1rem;
+}
+
+.non-emergencies p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
 
 /* FAQs */
 
@@ -925,7 +947,8 @@ input:focus {
     font-size: 1.3rem;
   }
 
-  .text p, .text h3 {
+  .text p,
+  .text h3 {
     font-size: 1.5rem;
   }
 
@@ -1014,9 +1037,9 @@ input:focus {
   }
 
   /* INDEX */
- .slider {
-  height: 60vh;
- }
+  .slider {
+    height: 60vh;
+  }
 
   .background-img-text-header {
     font-size: 1.75rem;
@@ -1048,13 +1071,14 @@ input:focus {
     font-size: 0.9rem;
   }
 
-  .text p, .text h3 {
+  .text p,
+  .text h3 {
     font-size: 1.25rem;
   }
 
   .text h3 {
-  margin-top: 2rem;
-}
+    margin-top: 2rem;
+  }
 
   .text.top,
   .text.bottom {
@@ -1066,8 +1090,13 @@ input:focus {
   }
 
   /* EMERGENCIES */
+  .heading {
+    font-size: 1.75rem;
+  }
+
   .description,
-  .phone {
+  .phone,
+  .non-emergencies {
     font-size: 1.25rem;
   }
 
@@ -1176,10 +1205,15 @@ input:focus {
   }
 
   /* EMERGENCIES */
+  .heading {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
 
   .description,
   .label,
-  .phone {
+  .phone,
+  .non-emergencies {
     font-size: 1rem;
   }
 
@@ -1193,13 +1227,13 @@ input:focus {
   }
 
   /* FAQs */
-.question h4 {
-  font-size: 1rem;
-}
+  .question h4 {
+    font-size: 1rem;
+  }
 
-.questions {
-  gap: 1.5rem;
-}
+  .questions {
+    gap: 1.5rem;
+  }
 
   .modal-content {
     max-width: 90%;
@@ -1294,12 +1328,17 @@ input:focus {
   }
 
   .text li,
-  .text h3, .text p {
+  .text h3,
+  .text p {
     font-size: 1rem;
   }
 
 
   /* EMERGENCIES */
+  .heading {
+    font-size: 1.25rem;
+  }
+
   .description,
   .label,
   .phone {
@@ -1343,7 +1382,7 @@ input:focus {
   .nav-links a {
     font-size: 0.75rem;
   }
- 
+
   /* INDEX */
   .background-img-text-header {
     font-size: 0.75rem;
@@ -1358,6 +1397,9 @@ input:focus {
     font-size: 0.6rem;
   }
 
+  .non-emergencies {
+    font-size: 0.8rem;
+  }
 
   /* FAQs */
   .modal-content {

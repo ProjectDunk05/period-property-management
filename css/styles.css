@@ -749,7 +749,7 @@ ul.footer-list {
   margin-bottom: 1.5rem;
 }
 
-label {
+.portalLabel {
   display: block;
   font-weight: 500;
   color: grey;

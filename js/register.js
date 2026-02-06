@@ -56,11 +56,18 @@ emailPasswordSubmit.addEventListener("click", async function (event) {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   const confirmPassword = document.getElementById('confirmPassword').value;
+  const registrationKey = document.getElementById('registrationKey').value;
 
 
   // confirm password match
   if (password !== confirmPassword) {
     alert("Passwords do not match. Please try again.");
+    return;
+  }
+
+   // confirm registration key
+  if (registrationKey !== "Ppm01234") {
+    alert("Registration Key Incorrect. Please try again.");
     return;
   }
 

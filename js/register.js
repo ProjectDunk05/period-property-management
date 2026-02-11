@@ -20,35 +20,35 @@ const db = getFirestore(app); // Initialize Firestore
 
 // Helper function to handle profile check and redirection
 async function checkAndRedirectForProfile(user) {
-    const userProfileRef = doc(db, 'userProfiles', user.uid);
+  const userProfileRef = doc(db, 'userProfiles', user.uid);
 
-    try {
-        const docSnap = await getDoc(userProfileRef);
+  try {
+    const docSnap = await getDoc(userProfileRef);
 
-        if (!docSnap.exists()) {
-            // Profile document DOES NOT exist in Firestore
-            console.log('Profile for user', user.uid, 'is incomplete. Redirecting to profile completion form.');
-            alert("Account created! Please complete your profile.");
-            window.location.href = "profileCompletion.html";
-        } else {
-            // Profile document EXISTS
-            console.log('Profile for user', user.uid, 'is complete.', docSnap.data());
-            alert("Account created and profile is complete. Welcome!");
-            // User has a complete profile, allow them into the main app dashboard
-            window.location.href = "portalDashboard.html";
-        }
-    } catch (error) {
-        console.error('Error checking profile status:', error.message);
-        alert('Account created, but an error occurred checking profile status. Please try logging in again.');
-        // Optionally, sign out the user if there's a critical error
-        auth.signOut();
-        window.location.href = "portalSignIn.html"; // Redirect to login
+    if (!docSnap.exists()) {
+      // Profile document DOES NOT exist in Firestore
+      console.log('Profile for user', user.uid, 'is incomplete. Redirecting to profile completion form.');
+      alert("Account created! Please complete your profile.");
+      window.location.href = "profileCompletion.html";
+    } else {
+      // Profile document EXISTS
+      console.log('Profile for user', user.uid, 'is complete.', docSnap.data());
+      alert("Account created and profile is complete. Welcome!");
+      // User has a complete profile, allow them into the main app dashboard
+      window.location.href = "portalDashboard.html";
     }
+  } catch (error) {
+    console.error('Error checking profile status:', error.message);
+    alert('Account created, but an error occurred checking profile status. Please try logging in again.');
+    // Optionally, sign out the user if there's a critical error
+    auth.signOut();
+    window.location.href = "portalSignIn.html"; // Redirect to login
+  }
 }
 
 
 // Email/Password Registration
-const emailPasswordSubmit = document.getElementById('submit'); 
+const emailPasswordSubmit = document.getElementById('submit');
 emailPasswordSubmit.addEventListener("click", async function (event) {
   event.preventDefault();
 
@@ -65,7 +65,7 @@ emailPasswordSubmit.addEventListener("click", async function (event) {
     return;
   }
 
-   // confirm registration key
+  // confirm registration key
   if (registrationKey !== "Ppm01234") {
     alert("Registration Key Incorrect. Please try again.");
     return;
@@ -77,9 +77,9 @@ emailPasswordSubmit.addEventListener("click", async function (event) {
     const user = userCredential.user;
 
     if (user) {
-        console.log('User registered successfully with email/password:', user.uid);
-        // Call the helper function to check profile and redirect
-        await checkAndRedirectForProfile(user);
+      console.log('User registered successfully with email/password:', user.uid);
+      // Call the helper function to check profile and redirect
+      await checkAndRedirectForProfile(user);
     }
   } catch (error) {
     const errorCode = error.code;
@@ -97,6 +97,13 @@ if (googleRegisterButton) {
     event.preventDefault();
 
     const provider = new GoogleAuthProvider(); // Create a new Google Auth Provider instance
+    const registrationKey = document.getElementById('registrationKey').value;
+
+    // confirm registration key
+    if (registrationKey !== "Ppm01234") {
+      alert("Registration Key Incorrect. Please try again.");
+      return;
+    }
 
     try {
       alert("Attempting to register/sign in with Google...");

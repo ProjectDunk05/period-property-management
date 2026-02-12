@@ -722,6 +722,10 @@ ul.footer-list {
 }
 
 .form-submit:hover {
+  background: darkgray;
+}
+
+.form-submit:hover {
   cursor: pointer;
 }
 

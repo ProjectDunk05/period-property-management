@@ -82,23 +82,30 @@ span {
 .nav-links {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 1.5rem;
   list-style: none;
   text-decoration: none;
 }
 
 .nav-links a {
+  display: inline-block;     
+  transition: transform 0.2s ease;
   font-size: 1.25rem;
   font-weight: 900;
 }
 
-
+.nav-regular:hover {
+  transform: translateY(-4px); 
+}
 
 .nav-regular {
   color: #111111;
   font-size: 1.25rem;
   text-decoration: none;
 }
+
+
 
 
 /* IMG SLIDER */
@@ -1488,6 +1495,10 @@ body {
     text-decoration: none;
     cursor: pointer;
     margin-left: 2rem;
+  }
+
+  .portalButtonSite:hover {
+    transform: translateY(-4px);
   }
 }
 

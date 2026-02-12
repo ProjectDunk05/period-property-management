@@ -231,7 +231,10 @@ ul.footer-list {
 
 .column-footer a {
   text-decoration: none;
+}
 
+.column-footer a:hover {
+  text-decoration: underline;
 }
 
 .column-footer img {

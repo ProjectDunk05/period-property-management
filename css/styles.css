@@ -89,14 +89,14 @@ span {
 }
 
 .nav-links a {
-  display: inline-block;     
+  display: inline-block;
   transition: transform 0.2s ease;
   font-size: 1.25rem;
   font-weight: 900;
 }
 
 .nav-regular:hover {
-  transform: translateY(-4px); 
+  transform: translateY(-4px);
 }
 
 .nav-regular {
@@ -578,17 +578,18 @@ ul.footer-list {
 }
 
 /* CONTACT US */
-.contact-box {
-  background-color: grey;
-  padding: 2rem 1.5rem;
-  border-radius: 0.5rem;
-  width: 50%;
-  margin: auto;
+.contact-container {
+  padding: 5% 0;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.contact-container {
-  max-width: 68.75rem;
-  margin: 0 auto;
+.contact-box {
+  width: 75%;
+  background-color: grey;
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  border-radius: 0.5rem;
+  margin: auto;
 }
 
 .contact-header {
@@ -676,6 +677,8 @@ ul.footer-list {
   margin-bottom: 0.5rem;
   text-align: left;
   font-size: 1rem;
+  color: grey;
+  font-weight: 900;
 }
 
 .form-input,
@@ -698,20 +701,28 @@ ul.footer-list {
 
 .form-input:focus-visible,
 .form-textarea:focus-visible {
-  outline: 2px solid grey;
-  outline-offset: 2px;
+  outline: 0.2rem solid grey;
+  outline-offset: 0.2rem;
 }
 
 .form-textarea {
-  min-height: 120px;
+  min-height: 8rem;
 }
 
 .form-submit {
-
-  margin-top: 1.2rem;
-  background-color: #fdf9f5;
-  padding: 13px 5px;
+  width: 10rem;
+  margin-top: 1rem;
+  background-color: grey;
+  color: #fdf9f5;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 900;
+  border: grey;
   border-radius: 0.375rem;
+}
+
+.form-submit:hover {
+  cursor: pointer;
 }
 
 .required {
@@ -1277,6 +1288,11 @@ input:focus {
 
   .contact-card p {
     font-size: 0.8rem;
+  }
+
+  /* REPORT A FAULT */
+  .form-submit {
+    width: 5rem;
   }
 
   /* CLIENT PORTAL SIGN IN & REGISTER */

@@ -601,8 +601,8 @@ ul.footer-list {
 }
 
 .contact-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
@@ -958,11 +958,6 @@ input:focus {
   .column-footer a {
     font-size: 1rem;
   }
-
-  /* CONTACT US */
-  .contact-box {
-    width: 75%;
-  }
 }
 
 /* lg */
@@ -1278,7 +1273,7 @@ input:focus {
   .card {
     padding: 1rem 2rem;
   }
-  
+
   .card h1 {
     font-size: 1.5rem;
   }
@@ -1287,7 +1282,12 @@ input:focus {
     margin-bottom: 1rem;
   }
 
-  .subtitle, .portalLabel, .return, .forgotPassword, .google-btn, .login-btn {
+  .subtitle,
+  .portalLabel,
+  .return,
+  .forgotPassword,
+  .google-btn,
+  .login-btn {
     font-size: 0.8rem;
   }
 
@@ -1295,6 +1295,7 @@ input:focus {
     font-size: 0.6rem;
   }
 }
+
 /* sm */
 @media (max-width: 640px) {
   .container {
@@ -1434,11 +1435,20 @@ input:focus {
     line-height: 1.4;
   }
 
+  /* CONTACT US */
+  .contact-card {
+    padding: 1rem 0.5rem;
+  }
+
+  .contact-card p {
+    font-size: 0.75rem;
+  }
+
   /* CLIENT PORTAL SIGN IN & REGISTER */
   .card {
     padding: 0.5rem 1rem;
   }
-  
+
   .card h1 {
     font-size: 1.25rem;
   }

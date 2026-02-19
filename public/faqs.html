@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Period Property Management</title>
+    <link rel="stylesheet" href="css/modern-normalise.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/faqs.js" defer></script>
+</head>
+
+<body>
+    <div class="container header">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
+                </a>
+            </div>
+            <div class="mobile-menu">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="nav-header" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="services.html" class="nav-regular">Services</a></li>
+                    <li><a href="emergencies.html" class="nav-regular">Emergencies</a></li>
+                    <li><a href="faqs.html" class="nav-regular">FAQs</a></li>
+                    <li><a href="contact-us.html" class="nav-regular">Contact Us</a></li>
+                    <li><a href="report-a-fault.html" class="nav-regular">Report a Fault</a></li>
+                    <li><a href="portalSignIn.html" class="portalButtonSite">Client Portal</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fullscreen image">
+        <div class="static">
+            <img src="images/slides3.jpg" alt="Image #3">
+            <div class="static-header">
+                <h1>FAQs</h1>
+                <p>Frequently asked questions</p>
+            </div>
+        </div>
+    </div>
+    <div class="container content">
+        <!-- Modal overlay -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="modal-close" class="modal-close">&times;</span>
+                <div id="modal-text"></div>
+            </div>
+        </div>
+        <div class="questions">
+            <div class="pair">
+                <div class="question">
+                    <h4>What advice do you have for water leaks and escapes?</h4>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <h3>Water Escapes and Leaks</h3>
+                    <p>Check that your cold water stop cock operates correctly at least once a year.</p>
+                    <p>Minor leaks between flats like a defective bath seal can impact the building insurance premium.
+                        However if an insurance claim had been submitted for every leak in recent years, the insurance
+                        premium would have been significantly higher and many insurance companies will only offer cover
+                        with water related claims excluded from the policy.</p>
+                    <h3>Liabilities for Lessees</h3>
+                    <p>To avoid misunderstandings, the following clarifies Lessee responsibilities:</p>
+                    <ul>
+                        <li>The uninsured excess is recoverable from the Lessee who is responsible, even accidentally in
+                            most cases, for any damage. This aligns with <a
+                                href="https://www.bellevuecourt.co.uk/wp-content/uploads/2018/11/service-charge-residential-management-code-3rd-edition-rics.pdf">guidance</a>
+                            from the Royal Institution of Chartered Surveyors
+                            (RICS).</li>
+                        <li>Where water leaks from one flat cause damage to another, it may be appropriate to:
+                            <ul>
+                                <li>Arrange for an electrical safety check of the flat(s) into which the water has
+                                    traveled.</li>
+                                <li>If necessary supply a dehumidifier to speed the drying process.</li>
+                                <li>In due course instruct a contractor to repair the affected areas. The total cost of
+                                    these activities, or the value of the excess, will be sought from the responsible
+                                    party when the next service charge invoice is issued.</li>
+                            </ul>
+                        </li>
+                        <li>Repairing the root cause of the leak is the responsibility of the Lessee of the flat, that
+                            is the source of the water escape.</li>
+                        <li>The rectification of damage to contents/possessions, as distinct from damage to fixed
+                            installations or decorative finishes, is not covered by the buildings insurance policy and
+                            usually falls outside of Freehold obligations under the Lease. Lessees are therefore advised
+                            to make contents insurance arrangements as required.</li>
+                    </ul>
+                    <h3>Insurance Considerations</h3>
+                    <p>Damage caused by incidents such as a broken pipe or an overflowing washing machine affecting
+                        electrics, paintwork, or wallpaper in the flat below typically forms part of a buildings
+                        insurance claim.</p>
+                    <p>Where the cause is a fault in the building or communal pipework (including pipes passing through
+                        a flat), the repair of the defect and damage to fixed installations or decorative finishes (but
+                        not to contents/possessions) will be funded from the service charge and, if appropriate, by
+                        means of an insurance claim(subject to policy excess).</p>
+                    <P><a
+                            href="https://www.bellevuecourt.co.uk/wp-content/uploads/2019/09/aviva_escape_of_water_and_fluid_leakage_lps_v1.2.pdf">Here</a>
+                        is a guide to view/download.</P>
+                </div>
+            </div>
+            <div class="pair">
+                <div class="question">
+                    <h4>Can i make alterations to my flat?
+                    </h4>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <h3>Alterations</h3>
+                    <p>When altering a flat in the UK, you generally need your landlord's written permission (a Licence
+                        to Alter) as most leases restrict changes, especially structural ones. Though simple
+                        improvements might have fewer hurdles; check your lease for specific clauses, as unauthorised
+                        alterations risk legal action, while consent for improvements shouldn't be unreasonably
+                        withheld.</p>
+                    <p>View <a href="https://www.lease-advice.org/advice-guide/understanding-lease/"
+                            target="_blank">This Guide</a> and <a
+                            href="https://www.lease-advice.org/article/consent-to-alterations-improvements-in-a-leasehold-property-what-charges-can-be-justified/"
+                            target="_blank">This Guide</a> from The Leasehold Advisory Service for guidance.</p>
+                </div>
+            </div>
+            <div class="pair">
+                <div class="question">
+                    <h4>Can i keep pets?</h4>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <h3>Pets</h3>
+                    <p>View <a
+                            href="https://www.gov.uk/guidance/renting-out-your-property-guidance-for-landlords-and-letting-agents/if-a-tenant-wants-a-pet-to-live-with-them"
+                            target="_blank">This Guide</a> from gov.uk for guidance.</p>
+                </div>
+            </div>
+            <div class="pair">
+                <div class="question">
+                    <h4>What can be done about noise in flats?</h4>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <h3>Noise Complaints</h3>
+                    <p>View <a
+                            href="https://www.gov.uk/how-to-resolve-neighbour-disputes/complain-about-noise-to-the-council"
+                            target="_blank">This Guide</a> from gov.uk and <a
+                            href="https://www.brighton-hove.gov.uk/environment/noise-pollution-and-air-quality/report-noise-problem">This
+                            Guide</a> from Brighton & Hove City Council for guidance and procedurs relating to noise complaints.</p>
+                </div>
+            </div>
+            <div class="pair">
+                <div class="question">
+                    <h4>What Should i consider when renting out my property?</h4>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <h3>Renting</h3>
+                    <p>View <a href="https://www.gov.uk/renting-out-a-property" target="_blank">This Guide</a> from
+                        gov.uk for guidance.</p>
+                </div>
+            </div>
+            <div class="pair">
+                <div class="question">
+                    <h4>Do you have any fire safety information for flats?</h4>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <h3>Fire Safety</h3>
+                    <P>View <a href="https://www.tpi.org.uk/media/e0wenr4x/tpi-advice-note-fire-safety-in-flats.pdf"
+                            target="_blank">This Document</a> from The Property Insitute for guidance.</P>
+                </div>
+            </div>
+            <div class="pair">
+                <div class="question">
+                    <h4>What should i consider if i wish to change my windows or skylights?</h4>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <h3>Windows</h3>
+                    <p>View <a href="https://www.bereco.co.uk/blog/window-planning-permission-revealed"
+                            target="_blank">This Guide</a> from bereco.co.uk for guidance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container footer">
+        <div class="logo-footer">
+            <a href="index.html">
+                <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
+            </a>
+        </div>
+        <div class="element-divider">
+            <hr class="element-divider-separator">
+        </div>
+        <div class="footer-container">
+            <div class="column-footer">
+                <div>
+                    <h3>PHONE:</h3>
+                    <P>01273 273672</P>
+                </div>
+                <div>
+                    <h3>Opening Hours:</h3>
+                    <ul class="footer-list">
+                        <li>Mon-Thu 9.00-17.00</li>
+                        <li>Friday 9.00-16.00</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>EMAIL:</h3>
+                    <p>info@periodpropertymanagement.co.uk</p>
+                </div>
+            </div>
+            <div class="column-footer">
+                <div>
+                    <h3>ADDRESS:</h3>
+                    <p>
+                        Period Property Management LTD<br>
+                        Chester Court,<br>
+                        3 Sussex Square,<br>
+                        Brighton, BN2 1FJ
+                    </p>
+                </div>
+                <div>
+                    <p>Company Reg Number: 06555003</p>
+                </div>
+            </div>
+            <div class="column-footer">
+                <div>
+                    <h3>NAVIGATION:</h3>
+                    <ul class="footer-list">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="emergencies.html">Emergencies</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="report-a-fault.html">Report a Fault</a></li>
+                        <li><a href="portalSignIn.html">Client Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-footer approved">
+                <div class="approvedLogos">
+                    <div class="approvedLogo">
+                        <img src="images/prsLogo.jpeg">
+                    </div>
+                    <div class="approvedLogo">
+                        <img src="images/TPI_Member.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2025 Period Property Management. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

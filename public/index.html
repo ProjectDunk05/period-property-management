@@ -41,7 +41,26 @@
     <div class="fullscreen image">
         <div class="slider">
             <div class="slides">
-                <img class="slide" src="images/a3.JPG" alt="Image #4">
+                <picture class="slide">
+                    <!-- AVIF source -->
+                    <source type="image/avif" srcset="
+      images/hero-flowers-800.avif 800w,
+      images/hero-flowers-1200.avif 1200w,
+      images/hero-flowers-1600.avif 1600w" sizes="100vw">
+
+                    <!-- WebP source -->
+                    <source type="image/webp" srcset="
+      images/hero-flowers-800.webp 800w,
+      images/hero-flowers-1200.webp 1200w,
+      images/hero-flowers-1600.webp 1600w" sizes="100vw">
+
+                    <!-- JPEG fallback -->
+                    <img src="images/hero-flowers-1200.jpg" srcset="
+      images/hero-flowers-800.jpg 800w,
+      images/hero-flowers-1200.jpg 1200w,
+      images/hero-flowers-1600.jpg 1600w" sizes="100vw" alt="Image #4" class="slide" decoding="async"
+                        fetchpriority="high">
+                </picture>
                 <img class="slide" src="images/BPC00055.jpg" alt="Image #1">
                 <img class="slide" src="images/a.JPG" alt="Image #5">
                 <img class="slide" src="images/BPC00203.jpg" alt="Image #5">

@@ -40,7 +40,25 @@
     </div>
     <div class="fullscreen image">
         <div class="static">
-            <img src="images/pexels-jansimons10-6664607.jpg" alt="Image #3">
+            <picture>
+                <!-- AVIF source -->
+                <source type="image/avif" srcset="
+                images/hero-pierSky-800.avif 800w,
+                images/hero-pierSky-1200.avif 1200w,
+                images/hero-pierSky-1600.avif 1600w" sizes="100vw">
+
+                <!-- WebP source -->
+                <source type="image/webp" srcset="
+                images/hero-pierSky-800.webp 800w,
+                images/hero-pierSky-1200.webp 1200w,
+                images/hero-pierSky-1600.webp 1600w" sizes="100vw">
+
+                <!-- JPEG fallback -->
+                <img src="images/hero-pierSky-1200.jpg" srcset="
+                images/hero-pierSky-800.jpg 800w,
+                images/hero-pierSky-1200.jpg 1200w,
+                images/hero-pierSky-1600.jpg 1600w" sizes="100vw" alt="Image #4" decoding="async" fetchpriority="high">
+            </picture>
             <div class="static-header">
                 <h1>SERVICES</h1>
                 <p>Professional, efficient, cost effective building administration services</p>
@@ -67,7 +85,23 @@
                 </ul>
             </div>
             <div class="image-content top">
-                <img src="images/0 240412 Interior 9.jpg" alt="decorative image">
+                <picture>
+                    <!-- AVIF source -->
+                    <source type="image/avif" srcset="
+                    images/content-chandelier-800.avif 800w,
+                    images/content-chandelier-1200.avif 1200w" sizes="100vw">
+
+                    <!-- WebP source -->
+                    <source type="image/webp" srcset="
+                    images/content-chandelier-800.webp 800w,
+                    images/content-chandelier-1200.webp 1200w" sizes="100vw">
+
+                    <!-- JPEG fallback -->
+                    <img src="images/content-chandelier-1200.jpg" srcset="
+                    images/content-chandelier-800.jpg 800w,
+                    images/content-chandelier-1200.jpg 1200w" sizes="100vw" alt="Image #4" decoding="async" loading="lazy"
+                        fetchpriority="high">
+                </picture>
             </div>
         </div>
 

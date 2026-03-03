@@ -39,7 +39,26 @@
     </div>
     <div class="fullscreen image">
         <div class="static">
-            <img src="images/slides3.jpg" alt="Image #3">
+            <picture>
+                <!-- AVIF source -->
+                <source type="image/avif" srcset="
+                images/hero-westPierSun-800.avif 800w,
+                images/hero-westPierSun-1200.avif 1200w,
+                images/hero-westPierSun-1600.avif 1600w" sizes="100vw">
+
+                <!-- WebP source -->
+                <source type="image/webp" srcset="  
+                images/hero-westPierSun-800.webp 800w,
+                images/hero-westPierSun-1200.webp 1200w,
+                images/hero-westPierSun-1600.webp 1600w" sizes="100vw">
+
+                <!-- JPEG fallback -->
+                <img src="images/hero-westPierSun-1200.jpg" srcset="
+                images/hero-westPierSun-800.jpg 800w,
+                images/hero-westPierSun-1200.jpg 1200w,
+                images/hero-westPierSun-1600.jpg 1600w" sizes="100vw" alt="Image #4" decoding="async"
+                    fetchpriority="high">
+            </picture>
             <div class="static-header">
                 <h1>FAQs</h1>
                 <p>Frequently asked questions</p>
@@ -147,7 +166,8 @@
                             href="https://www.gov.uk/how-to-resolve-neighbour-disputes/complain-about-noise-to-the-council"
                             target="_blank">This Guide</a> from gov.uk and <a
                             href="https://www.brighton-hove.gov.uk/environment/noise-pollution-and-air-quality/report-noise-problem">This
-                            Guide</a> from Brighton & Hove City Council for guidance and procedurs relating to noise complaints.</p>
+                            Guide</a> from Brighton & Hove City Council for guidance and procedurs relating to noise
+                        complaints.</p>
                 </div>
             </div>
             <div class="pair">

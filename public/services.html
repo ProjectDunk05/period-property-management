@@ -99,15 +99,31 @@
                     <!-- JPEG fallback -->
                     <img src="images/content-chandelier-1200.jpg" srcset="
                     images/content-chandelier-800.jpg 800w,
-                    images/content-chandelier-1200.jpg 1200w" sizes="100vw" alt="Image #4" decoding="async" loading="lazy"
-                        fetchpriority="high">
+                    images/content-chandelier-1200.jpg 1200w" sizes="100vw" alt="Image #4" decoding="async"
+                        loading="lazy" fetchpriority="high">
                 </picture>
             </div>
         </div>
 
         <div class="split">
             <div class="image-content bottom">
-                <img src="images/0 240412 Interior 7.jpg" alt="decorative image">
+                <picture>
+                    <!-- AVIF source -->
+                    <source type="image/avif" srcset="
+                    images/content-stairs-800.avif 800w,
+                    images/content-stairs-1200.avif 1200w" sizes="100vw">
+
+                    <!-- WebP source -->
+                    <source type="image/webp" srcset="
+                    images/content-stairs-800.webp 800w,
+                    images/content-stairs-1200.webp 1200w" sizes="100vw">
+
+                    <!-- JPEG fallback -->
+                    <img src="images/content-stairs-1200.jpg" srcset="
+                    images/content-stairs-800.jpg 800w,
+                    images/content-stairs-1200.jpg 1200w" sizes="100vw" alt="Image #4" decoding="async" loading="lazy"
+                        fetchpriority="high">
+                </picture>
             </div>
             <div class="text bottom">
                 <h2>Building Service</h2>

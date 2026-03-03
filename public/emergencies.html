@@ -41,7 +41,26 @@
     </div>
     <div class="fullscreen image">
         <div class="static">
-            <img src="images/a.JPG" alt="Image #3">
+            <picture>
+                    <!-- AVIF source -->
+                    <source type="image/avif" srcset="
+                    images/hero-lewesCrescent-800.avif 800w,
+                    images/hero-lewesCrescent-1200.avif 1200w,
+                    images/hero-lewesCrescent-1600.avif 1600w" sizes="100vw">
+
+                    <!-- WebP source -->
+                    <source type="image/webp" srcset="
+                    images/hero-lewesCrescent-800.webp 800w,
+                    images/hero-lewesCrescent-1200.webp 1200w,
+                    images/hero-lewesCrescent-1600.webp 1600w" sizes="100vw">
+
+                    <!-- JPEG fallback -->
+                    <img src="images/hero-lewesCrescent-1200.jpg" srcset="
+                    images/hero-lewesCrescent-800.jpg 800w,
+                    images/hero-lewesCrescent-1200.jpg 1200w,
+                    images/hero-lewesCrescent-1600.jpg 1600w" sizes="100vw" alt="Image #4" class="slide" decoding="async"
+                        fetchpriority="high">
+                </picture>
             <div class="static-header">
                 <h1>EMERGENCIES</h1>
                 <p>Who to call in an emergency</p>

@@ -581,7 +581,7 @@ ul.footer-list {
 }
 
 .contact-box {
-  width: 75%;
+  width: 50%;
   background-color: grey;
   padding: 2rem 1.5rem 3rem 1.5rem;
   border-radius: 0.5rem;
@@ -633,7 +633,7 @@ ul.footer-list {
   margin-bottom: 0.5rem;
 }
 
-.contact-card p {
+.contact-card p, .contact-card span {
   font-size: 0.95rem;
   color: grey;
 }
@@ -647,6 +647,26 @@ ul.footer-list {
   text-decoration: underline;
 }
 
+.hours {
+  text-align: center;
+}
+
+.hours-row {
+  display: grid;
+  grid-template-columns: 10rem 10rem;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 0.25rem 0;
+}
+
+.hours-row span:first-child {
+  text-align: right;
+  font-weight: 500;
+}
+
+.hours-row span:last-child {
+  text-align: left;
+}
 
 /* REPORT A FAULT */
 
@@ -731,12 +751,12 @@ ul.footer-list {
 
 /*CLIENT PORTAL SIGN IN & REGISTER */
 .background {
-  position: fixed;   
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;       
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -1302,7 +1322,7 @@ input:focus {
     font-size: 1rem;
   }
 
-  .contact-card p {
+  .contact-card p, .contact-card span {
     font-size: 0.8rem;
   }
 
@@ -1482,8 +1502,12 @@ input:focus {
     padding: 1rem 0.5rem;
   }
 
-  .contact-card p {
+  .contact-card p, .contact-card span {
     font-size: 0.75rem;
+  }
+
+  .hours-row {
+    gap: 0.5rem
   }
 
   /* CLIENT PORTAL SIGN IN & REGISTER */

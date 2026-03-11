@@ -226,10 +226,31 @@ ul.footer-list {
 
 .column-footer p,
 .column-footer li,
-.column-footer a {
+.column-footer a,
+.column-footer span {
   font-size: 1.25rem;
   color: #111111;
   font-weight: 600;
+}
+
+.hours-footer {
+  text-align: left;
+}
+
+.hours-row-footer {
+  display: grid;
+  grid-template-columns: 7rem 7rem;
+  justify-content: start;
+  gap: 0.1rem;
+  margin: 0.25rem 0;
+}
+
+.hours-row-footer span:first-child {
+  text-align: start;
+}
+
+.hours-row-footer span:last-child {
+  text-align: left;
 }
 
 .column-footer a {
@@ -633,7 +654,8 @@ ul.footer-list {
   margin-bottom: 0.5rem;
 }
 
-.contact-card p, .contact-card span {
+.contact-card p,
+.contact-card span {
   font-size: 0.95rem;
   color: grey;
 }
@@ -1012,8 +1034,13 @@ input:focus {
 
   .column-footer p,
   .column-footer li,
-  .column-footer a {
+  .column-footer a,
+  .column-footer span {
     font-size: 1rem;
+  }
+
+  .hours-row-footer {
+    grid-template-columns: 6rem 6rem;
   }
 }
 
@@ -1082,6 +1109,20 @@ input:focus {
     border-right-width: 0;
     border-bottom-width: 0;
     width: 100%;
+  }
+
+  /* FOOTER */
+  .hours-footer {
+    text-align: center;
+  }
+
+  .hours-row-footer {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .hours-row-footer span:first-child {
+    text-align: right;
   }
 
   /* INDEX */
@@ -1224,7 +1265,8 @@ input:focus {
 
   .column-footer p,
   .column-footer li,
-  .column-footer a {
+  .column-footer a,
+  .column-footer span {
     font-size: 0.75rem;
   }
 
@@ -1322,7 +1364,8 @@ input:focus {
     font-size: 1rem;
   }
 
-  .contact-card p, .contact-card span {
+  .contact-card p,
+  .contact-card span {
     font-size: 0.8rem;
   }
 
@@ -1502,7 +1545,8 @@ input:focus {
     padding: 1rem 0.5rem;
   }
 
-  .contact-card p, .contact-card span {
+  .contact-card p,
+  .contact-card span {
     font-size: 0.75rem;
   }
 

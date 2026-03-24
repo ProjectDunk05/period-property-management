@@ -1404,6 +1404,12 @@ input:focus {
     font-size: 0.9rem;
   }
 
+  /* FOOTER */
+  .footer-bottom {
+    padding: 1rem;
+    font-size: 0.75rem;
+  }
+
   /* INDEX */
   .background-img-text-header {
     font-size: 1rem;
@@ -1498,6 +1504,12 @@ input:focus {
   /* HEADER */
   .nav-links a {
     font-size: 0.75rem;
+  }
+
+  /* FOOTER */
+  .footer-bottom {
+    font-size: 0.5rem;
+    padding: 0.75rem;
   }
 
   /* INDEX */

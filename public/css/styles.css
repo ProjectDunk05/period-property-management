@@ -334,7 +334,8 @@ ul.footer-list {
 
 .text h2 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .text li {
@@ -342,20 +343,14 @@ ul.footer-list {
   margin-bottom: 0.2rem;
 }
 
-.text p,
-.text h3 {
+.text p {
   font-size: 2rem;
   margin-top: 0.5rem;
-}
-
-.text h3 {
-  margin-top: 7rem;
 }
 
 .split {
   display: flex;
   flex-direction: row;
-
 }
 
 .text {
@@ -1016,6 +1011,7 @@ input:focus {
 
   .text h2 {
     font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   .text li {
@@ -1153,20 +1149,16 @@ input:focus {
 
   /* SERVICES */
   .text h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
   }
 
   .text li {
     font-size: 0.9rem;
   }
 
-  .text p,
-  .text h3 {
+  .text p {
     font-size: 1.25rem;
-  }
-
-  .text h3 {
-    margin-top: 2rem;
   }
 
   .text.top,
@@ -1446,6 +1438,7 @@ input:focus {
 
   .text h2 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .text li,
@@ -1454,6 +1447,9 @@ input:focus {
     font-size: 1rem;
   }
 
+  .text ul {
+    padding-left: 0.5rem;
+  }
 
   /* EMERGENCIES */
   .heading {

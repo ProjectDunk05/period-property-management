@@ -12,11 +12,11 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="container header">
         <div class="headerBar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/Period Property Banner 260311.jpg" alt="Period Property Management Logo" class="responsive-img">
+                    <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
                 </a>
             </div>
             <div class="mobile-menu">
@@ -40,7 +40,25 @@
     </div>
     <div class="fullscreen image">
         <div class="static">
-           <img src="images/bristolMansions.jpg">
+            <picture>
+                <!-- AVIF source -->
+                <source type="image/avif" srcset="
+                images/hero-pierSky-800.avif 800w,
+                images/hero-pierSky-1200.avif 1200w,
+                images/hero-pierSky-1600.avif 1600w" sizes="100vw">
+
+                <!-- WebP source -->
+                <source type="image/webp" srcset="
+                images/hero-pierSky-800.webp 800w,
+                images/hero-pierSky-1200.webp 1200w,
+                images/hero-pierSky-1600.webp 1600w" sizes="100vw">
+
+                <!-- JPEG fallback -->
+                <img src="images/hero-pierSky-1200.jpg" srcset="
+                images/hero-pierSky-800.jpg 800w,
+                images/hero-pierSky-1200.jpg 1200w,
+                images/hero-pierSky-1600.jpg 1600w" sizes="100vw" alt="Image #4" decoding="async" fetchpriority="high">
+            </picture>
             <div class="static-header">
                 <h1>SERVICES</h1>
                 <p>Professional, Efficient, Cost-effective Building Administration Services</p>
@@ -119,7 +137,7 @@
     <footer class="container footer">
         <div class="logo-footer">
             <a href="index.html">
-                <img src="images/Period Property Banner 260311.jpg" alt="Period Property Management Logo" class="responsive-img">
+                <img src="images/ppmLogo.png" alt="Period Property Management Logo" class="responsive-img">
             </a>
         </div>
         <div class="element-divider">

@@ -59,18 +59,20 @@ span {
 }
 
 .logo {
-  width: 50%;
+  width: 30%;
 }
 
 .headerBar {
   display: flex;
   justify-content: space-between;
+  height: 7rem;
   align-items: center;
 }
 
 .responsive-img {
   width: 100%;
   height: 100%;
+  max-width: 600px;
   display: block;
 }
 
@@ -87,13 +89,12 @@ span {
   gap: 1.5rem;
   list-style: none;
   text-decoration: none;
-  padding-right: 2rem;
 }
 
 .nav-links a {
   display: inline-block;
   transition: transform 0.2s ease;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -966,6 +967,13 @@ input:focus {
 
 /* MEDIA QUERIES */
 
+/* For Super wide screens fix header bar width */
+@media (min-width: 1700px) {
+  .headerBar {
+    width: 90rem;
+  }
+}
+
 /* 2xl */
 @media (max-width: 1536px) {
   .container {
@@ -1582,7 +1590,7 @@ input:focus {
 }
 
 body {
-  background-color: #92a8a9;
+  background-color: #f6f6f6;
   margin: 0;
 }
 

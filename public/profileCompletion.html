@@ -11,6 +11,26 @@
 </head>
 
 <body>
+    <picture class="background">
+        <!-- AVIF source -->
+        <source type="image/avif" srcset="
+        images/background-stars-800.avif 800w,
+        images/background-stars-1200.avif 1200w,
+        images/background-stars-1600.avif 1600w" sizes="100vw">
+
+        <!-- WebP source -->
+        <source type="image/webp" srcset="
+        images/background-stars-800.webp 800w,  
+        images/background-stars-1200.webp 1200w,
+        images/background-stars-1600.webp 1600w" sizes="100vw">
+
+        <!-- JPEG fallback -->
+        <img src="images/background-stars-1200.jpg" srcset="    
+        images/background-stars-800.jpg 800w,
+        images/background-stars-1200.jpg 1200w,
+        images/background-stars-1600.jpg 1600w" sizes="100vw" alt="" class="background-img"  decoding="async"
+            fetchpriority="high">
+    </picture>
     <div class="container content">
         <div class="box">
             <div class="card">
@@ -34,11 +54,4 @@
     </div>
 
 </body>
-
-<style>
-    body {
-        background-image: url(images/pexels-jansimons10-6664607.jpg);
-    }
-</style>
-
 </html>

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container header">
+    <div class="header">
         <div class="headerBar">
             <div class="logo">
                 <a href="index.html">
@@ -25,7 +25,12 @@
                     <span></span>
                 </div>
             </div>
-            <div class="nav-header" id="nav-menu">
+            <div class="overlay" onclick="toggleMenu()"></div>
+            <nav class="nav-header" id="nav-menu">
+                <div class="menu-header">
+                    <span>Menu</span>
+                    <button class="close-btn" onclick="toggleMenu()">✕</button>
+                </div>
                 <ul class="nav-links">
                     <li><a href="services.html" class="nav-regular">Services</a></li>
                     <li><a href="emergencies.html" class="nav-regular">Emergencies</a></li>
@@ -34,7 +39,7 @@
                     <li><a href="report-a-fault.html" class="nav-regular">Report a Fault</a></li>
                     <li><a href="portalSignIn.html" class="portalButtonSite">Client Portal</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </div>
     <div class="fullscreen image">
@@ -84,7 +89,8 @@
                     <p>Check that your cold water stop cock operates correctly at least once a year.</p>
                     <p>Minor leaks between flats like a defective bath seal can impact the building insurance premium.
                         However if an insurance claim had been submitted for every leak in recent years, the insurance
-                        premium would have become significantly higher and many insurance companies would only offer cover
+                        premium would have become significantly higher and many insurance companies would only offer
+                        cover
                         with water related claims excluded from the policy.</p>
                     <h3>Liabilities for Lessees</h3>
                     <p>To avoid misunderstandings, the following clarifies Lessee responsibilities:</p>

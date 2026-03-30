@@ -1,7 +1,11 @@
 // toggle function for hambuger menu display
 function toggleMenu() {
-    document.getElementById('nav-menu').classList.toggle('active');
-  }
+    const menu = document.getElementById("nav-menu");
+    const overlay = document.querySelector(".overlay");
+
+    menu.classList.toggle("open");
+    overlay.classList.toggle("active");
+}
 
  // Image slider 
 const slides = document.querySelectorAll(".slides img"); 

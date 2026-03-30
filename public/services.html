@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="container header">
+    <div class="header">
         <div class="headerBar">
             <div class="logo">
                 <a href="index.html">
@@ -26,16 +26,21 @@
                     <span></span>
                 </div>
             </div>
-            <div class="nav-header" id="nav-menu">
+            <div class="overlay" onclick="toggleMenu()"></div>
+            <nav class="nav-header" id="nav-menu">
+                <div class="menu-header">
+                    <span>Menu</span>
+                    <button class="close-btn" onclick="toggleMenu()">✕</button>
+                </div>
                 <ul class="nav-links">
                     <li><a href="services.html" class="nav-regular">Services</a></li>
                     <li><a href="emergencies.html" class="nav-regular">Emergencies</a></li>
                     <li><a href="faqs.html" class="nav-regular">FAQs</a></li>
                     <li><a href="contact-us.html" class="nav-regular">Contact Us</a></li>
                     <li><a href="report-a-fault.html" class="nav-regular">Report a Fault</a></li>
-                    <li><a href="clientPortal.html" class="portalButtonSite">Client Portal</a></li>
+                    <li><a href="portalSignIn.html" class="portalButtonSite">Client Portal</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </div>
     <div class="fullscreen image">
@@ -69,7 +74,8 @@
         <div class="split">
             <div class="text top">
                 <h2>Building Administrators</h2>
-                <P>With a practical, hands-on approach, we have built successful relationships with Freeholders and Leaseholders for nearly 30 years.<br><br>
+                <P>With a practical, hands-on approach, we have built successful relationships with Freeholders and
+                    Leaseholders for nearly 30 years.<br><br>
                     We fully understand the importance of providing an efficient and reliable service especially in an
                     industry where this frequently does not occur.</P>
 

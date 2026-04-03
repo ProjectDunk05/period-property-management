@@ -310,21 +310,58 @@ ul.footer-list {
   gap: 1rem;
 }
 
-.threeBoxes {
+.twoBoxes {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
 }
 
 .icon-indexText {
   display: flex;
   flex-direction: column;
   background-color: grey;
-  width: 33%;
+  width: 100%;
   padding: 2rem 1rem;
   gap: 1rem;
   color: #fdf9f5;
   border-radius: 0.5rem;
   font-size: 1.5rem;
+}
+
+.gallery-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.portrait-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.image-box {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.portrait {
+  aspect-ratio: 3 / 4;
+  flex: 1;
+}
+
+.landscape {
+  aspect-ratio: 16 / 9;
+  width: 100%;
 }
 
 /* SERVICES */
@@ -1391,10 +1428,10 @@ input:focus {
   }
 
   /* HEADER */
-.headerBar {
-  width: 100%;
-  padding-right: 1rem;
-}
+  .headerBar {
+    width: 100%;
+    padding-right: 1rem;
+  }
 
   .nav-links a {
     font-size: 0.9rem;
@@ -1407,6 +1444,10 @@ input:focus {
   }
 
   /* INDEX */
+  .portrait-row {
+    flex-direction: column;
+  }
+
   .threeBoxes {
     flex-direction: column;
     gap: 0.5rem;
@@ -1494,9 +1535,9 @@ input:focus {
   }
 
   /* HEADER */
-.responsive-img {
-  width: 250px;
-}
+  .responsive-img {
+    width: 250px;
+  }
 
   .nav-links a {
     font-size: 0.75rem;

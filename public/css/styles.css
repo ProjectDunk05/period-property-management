@@ -1444,19 +1444,8 @@ input:focus {
   }
 
   /* INDEX */
-  .portrait-row {
+  .portrait-row, .twoBoxes {
     flex-direction: column;
-  }
-
-  .threeBoxes {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .icon-indexText {
-    width: 80%;
-    margin: auto;
-    padding: 1rem;
   }
 
   /* STATIC IMG & HEADER BANNER */
